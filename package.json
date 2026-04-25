@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "pnpm dlx @tailwindcss/cli -i ./src/main.css -o ./dist/styles.css --watch",
-    "build": "pnpm dlx @tailwindcss/cli -i ./src/main.css -o ./dist/styles.css --minify"
+    "build": "pnpm dlx @tailwindcss/cli -i ./src/main.css -o ./dist/styles.css --minify",
+    "serve": "pnpm dlx serve ."
   },
   "devDependencies": {
     "tailwindcss": "^4.2.0",
