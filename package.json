@@ -1,0 +1,13 @@
+{
+  "name": "menstruatieschool-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm dlx @tailwindcss/cli -i ./src/main.css -o ./dist/styles.css --watch",
+    "build": "pnpm dlx @tailwindcss/cli -i ./src/main.css -o ./dist/styles.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.2.0",
+    "@tailwindcss/cli": "^4.2.0"
+  }
+}
