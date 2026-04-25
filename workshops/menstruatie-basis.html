@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menstruatie Basis — De MenstruatieSchool</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-50 bg-white border-b border-[var(--color-border-subtle)] h-[60px] flex items-center">
+    <div class="container-site flex items-center gap-8 w-full">
+
+      <!-- Logo -->
+      <a href="../index.html" class="flex items-center gap-2 no-underline shrink-0">
+        <div class="w-7 h-7 rounded-full bg-[var(--color-amber)] flex items-center justify-center">
+          <div class="w-2.5 h-2.5 rounded-full bg-white"></div>
+        </div>
+        <span class="font-[Urbanist] font-normal text-[15px] tracking-[-0.01em] text-[var(--color-charcoal)]">
+          De Menstruatie<strong>School</strong>
+        </span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav id="main-nav" class="hidden md:flex items-center gap-1 flex-1">
+        <a href="../index.html#workshops" class="nav-link">Workshops</a>
+        <a href="../index.html#over-ons" class="nav-link">Over ons</a>
+      </nav>
+
+      <!-- CTA -->
+      <a href="../index.html#workshops" class="btn btn-dark btn-sm hidden md:inline-flex">Aanmelden</a>
+
+      <!-- Hamburger -->
+      <button
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Menu openen"
+        class="flex md:hidden flex-col gap-[5px] p-2 ml-auto"
+      >
+        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Workshop hero ─────────────────────────────────────── -->
+    <section class="bg-white border-b border-[var(--color-border-subtle)] py-16">
+      <div class="container-site">
+        <!-- Accent bar -->
+        <div class="h-1 w-16 rounded-full bg-[var(--color-vermilion)] mb-6"></div>
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-[var(--color-vermilion-mist)] rounded-[var(--radius-pill)] px-4 py-1.5 mb-5">
+          <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-vermilion)]"></div>
+          <span class="type-overline text-[#8C1810]">Workshop · Menstruatiecyclus</span>
+        </div>
+
+        <h1 class="font-bold mb-5">Menstruatie Basis</h1>
+
+        <p class="body-lg text-[var(--color-charcoal-40)] max-w-[560px]">
+          De fundamenten van je cyclus: hormonen, fasen en wat je lichaam je vertelt. Een toegankelijke introductie voor iedereen die meer wil begrijpen over de menstruatiecyclus.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Content + Sidebar ─────────────────────────────────── -->
+    <section class="py-16">
+      <div class="container-site grid md:grid-cols-[1fr_300px] gap-12 items-start">
+
+        <!-- Main content -->
+        <div>
+          <h2 class="font-bold mb-5">Over deze workshop</h2>
+          <p class="body-lg text-[var(--color-charcoal-40)] mb-4">
+            In deze workshop duiken we in de basisprincipes van de menstruatiecyclus. Je leert hoe hormonen samenwerken, wat er in elke fase van je cyclus gebeurt en hoe je de signalen van je lichaam kunt herkennen en begrijpen.
+          </p>
+          <p class="body-lg text-[var(--color-charcoal-40)] mb-10">
+            De workshop is toegankelijk voor iedereen, ongeacht je voorkennis. We combineren theorie met praktische inzichten zodat je na afloop direct aan de slag kunt met je eigen cyclus.
+          </p>
+
+          <h3 class="font-bold mb-5">Wat je meeneemt</h3>
+          <ul class="flex flex-col gap-3 mb-12">
+            <li class="flex items-start gap-3">
+              <span class="mt-[6px] shrink-0 w-2 h-2 rounded-full bg-[var(--color-vermilion)]"></span>
+              <span class="type-body text-[var(--color-charcoal-40)]">Inzicht in de vier fases van je cyclus en de bijbehorende hormonen</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[6px] shrink-0 w-2 h-2 rounded-full bg-[var(--color-vermilion)]"></span>
+              <span class="type-body text-[var(--color-charcoal-40)]">Herkennen van signalen die je lichaam geeft gedurende de maand</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-[6px] shrink-0 w-2 h-2 rounded-full bg-[var(--color-vermilion)]"></span>
+              <span class="type-body text-[var(--color-charcoal-40)]">Praktische tools om je cyclus bij te houden en te begrijpen</span>
+            </li>
+          </ul>
+
+          <a href="../index.html#workshops" class="btn btn-ghost">← Terug naar alle workshops</a>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sticky top-20">
+          <div class="card-info-vermilion flex flex-col gap-5">
+
+            <div>
+              <p class="detail-meta-label mb-1">Datum</p>
+              <p class="detail-meta-value">10 mei 2025</p>
+            </div>
+
+            <div>
+              <p class="detail-meta-label mb-1">Locatie</p>
+              <p class="detail-meta-value">Amsterdam Oost</p>
+            </div>
+
+            <div>
+              <p class="detail-meta-label mb-1">Duur</p>
+              <p class="detail-meta-value">3 uur</p>
+            </div>
+
+            <div>
+              <p class="detail-meta-label mb-1">Prijs</p>
+              <p class="detail-meta-value">€45</p>
+            </div>
+
+            <div>
+              <p class="detail-meta-label mb-2">Beschikbaarheid</p>
+              <span class="tag tag-available">8 plekken vrij</span>
+            </div>
+
+            <a
+              href="https://www.hipsy.nl"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-primary btn-lg w-full justify-center"
+            >Koop je ticket</a>
+
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="bg-[var(--color-charcoal)]">
+    <div class="container-site grid md:grid-cols-4 gap-12 pt-14 pb-10">
+
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-6 h-6 rounded-full bg-[var(--color-amber)] flex items-center justify-center shrink-0">
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+          </div>
+          <span class="font-[Urbanist] font-bold text-[14px] text-white">De MenstruatieSchool</span>
+        </div>
+        <p class="type-caption text-[13px] leading-relaxed max-w-[180px]" style="color: var(--color-charcoal-60)">
+          Toegankelijke kennis over de menstruatiecyclus — van jong tot oud.
+        </p>
+      </div>
+
+      <!-- Programma -->
+      <div>
+        <p class="type-overline mb-4" style="color: var(--color-charcoal-60)">Programma</p>
+        <ul class="flex flex-col gap-2">
+          <li><a href="../index.html#workshops" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Workshops</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Online lessen</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Voor scholen</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Voor werkgevers</a></li>
+        </ul>
+      </div>
+
+      <!-- Organisatie -->
+      <div>
+        <p class="type-overline mb-4" style="color: var(--color-charcoal-60)">Organisatie</p>
+        <ul class="flex flex-col gap-2">
+          <li><a href="../index.html#over-ons" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Over ons</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Missie</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Team</a></li>
+          <li><a href="#" class="type-caption text-[14px] no-underline transition-colors" style="color: var(--color-charcoal-40)">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter mini -->
+      <div>
+        <p class="type-overline mb-4" style="color: var(--color-charcoal-60)">Nieuwsbrief</p>
+        <p class="type-caption text-[13px] leading-relaxed mb-4" style="color: var(--color-charcoal-60)">
+          Blijf op de hoogte van nieuwe workshops.
+        </p>
+        <form data-placeholder="emailoctopus-footer" class="flex">
+          <input
+            type="email"
+            placeholder="jij@voorbeeld.nl"
+            required
+            style="background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10); border-right: none; border-radius: var(--radius-pill) 0 0 var(--radius-pill); padding: 9px 14px; color: #fff; font-family: var(--font-caption); font-size: 13px; outline: none; flex: 1; width: 0;"
+          >
+          <button
+            type="submit"
+            style="background: var(--color-amber); color: var(--color-charcoal); border: none; padding: 9px 16px; border-radius: 0 var(--radius-pill) var(--radius-pill) 0; font-size: 16px; cursor: pointer; shrink: 0;"
+          >→</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/5">
+      <div class="container-site flex justify-between items-center py-4">
+        <span class="type-caption text-[12px]" style="color: var(--color-charcoal-60)">© 2025 De MenstruatieSchool</span>
+        <div class="flex gap-5">
+          <a href="#" class="type-caption text-[12px] no-underline" style="color: var(--color-charcoal-60)">Privacy</a>
+          <a href="#" class="type-caption text-[12px] no-underline" style="color: var(--color-charcoal-60)">Voorwaarden</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
