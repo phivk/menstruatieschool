@@ -1,0 +1,47 @@
+---
+const { workshop } = Astro.props;
+const { data, slug } = workshop;
+
+const accentBorder = {
+  vermilion: 'border-t-[var(--color-vermilion)]',
+  amber:     'border-t-[var(--color-amber)]',
+  blush:     'border-t-[var(--color-blush)]',
+}[data.accentColor];
+
+const moreInfoColor = {
+  vermilion: 'text-[var(--color-vermilion)]',
+  amber:     'text-[var(--color-amber-dark)]',
+  blush:     'text-[var(--color-blush-dark)]',
+}[data.accentColor];
+
+const typeTagClass = {
+  vermilion: 'tag-outline-vermilion',
+  amber:     'tag-outline-amber',
+  blush:     'tag-outline-blush',
+}[data.accentColor];
+
+const statusTagClass = {
+  available:   'tag-available',
+  new:         'tag-new',
+  'last-spots': 'tag-last-spots',
+  full:        'tag-full',
+}[data.statusType];
+---
+
+<a href={`/workshops/${slug}/`} class={`workshop-card-link card border-t-[3px] ${accentBorder}`}>
+  <div class="card-body">
+    <div class="card-footer mb-3">
+      <span class={`tag ${statusTagClass}`}>{data.status}</span>
+      <span class={`tag ${typeTagClass}`}>Workshop</span>
+    </div>
+    <h3 class="card-title">{data.title}</h3>
+    <p class="card-date">{data.displayDate} · {data.location}</p>
+    <p class="type-body text-[var(--color-charcoal-40)] text-[14px] mt-2 leading-relaxed">
+      {data.cardDescription}
+    </p>
+    <div class="card-footer mt-4">
+      <span class="type-caption text-[12px] text-[var(--color-charcoal-20)]">{data.duration} · {data.price}</span>
+      <span class={`type-caption text-[13px] ${moreInfoColor}`}>Meer info →</span>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,31 @@
+---
+import NavToggle from './NavToggle.jsx';
+---
+
+<header class="sticky top-0 z-50 bg-white border-b border-[var(--color-border-subtle)] h-[60px] flex items-center relative">
+  <div class="container-site flex items-center gap-8 w-full">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 no-underline shrink-0">
+      <div class="w-7 h-7 rounded-full bg-[var(--color-amber)] flex items-center justify-center">
+        <div class="w-2.5 h-2.5 rounded-full bg-white"></div>
+      </div>
+      <span class="font-[Urbanist] font-normal text-[15px] tracking-[-0.01em] text-[var(--color-charcoal)]">
+        De Menstruatie<strong>School</strong>
+      </span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-1 flex-1">
+      <a href="/#workshops" class="nav-link">Workshops</a>
+      <a href="/#over-ons" class="nav-link">Over ons</a>
+    </nav>
+
+    <!-- CTA -->
+    <a href="/#workshops" class="btn btn-dark btn-sm hidden md:inline-flex">Aanmelden</a>
+
+    <!-- Mobile nav toggle (Preact island) -->
+    <NavToggle client:load />
+
+  </div>
+</header>
