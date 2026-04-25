@@ -39,10 +39,10 @@
   --color-amber-mist:      #FDF0C8;
 
   /* Colors — neutrals */
-  --color-charcoal:        #1A1410;
-  --color-charcoal-60:     #5A4F48;
-  --color-charcoal-40:     #7A706A;
-  --color-charcoal-20:     #999999;
+  --color-bordeaux:        #1a010c;
+  --color-bordeaux-60:     #5A4F48;
+  --color-bordeaux-40:     #7A706A;
+  --color-bordeaux-20:     #999999;
 
   --color-white:           #FFFFFF;
   --color-off-white:       #F5F5F5;
@@ -55,7 +55,7 @@
   --color-bg-highlight:    #FEF8E6;
   --color-bg-soft:         #FDF5F4;
   --color-bg-accent:       #FDF0EE;
-  --color-bg-inverse:      #1A1410;
+  --color-bg-inverse:      var(--color-bordeaux);
 
   /* Typography */
   --font-display:  'Urbanist', 'Gill Sans', Georgia, serif;
@@ -126,7 +126,7 @@
 @layer base {
   html {
     background-color: var(--color-bg-primary);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     font-family: var(--font-body);
     font-size: var(--font-size-base);
     line-height: var(--line-height-normal);
@@ -139,7 +139,7 @@
     font-size: var(--font-size-5xl);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   h2 {
@@ -148,7 +148,7 @@
     font-size: var(--font-size-4xl);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   h3 {
@@ -156,7 +156,7 @@
     font-weight: 200;
     font-size: var(--font-size-3xl);
     line-height: var(--line-height-snug);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   h4 {
@@ -164,7 +164,7 @@
     font-weight: 200;
     font-size: var(--font-size-2xl);
     line-height: var(--line-height-snug);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   h5 {
@@ -172,7 +172,7 @@
     font-weight: 400;
     font-size: var(--font-size-xl);
     line-height: var(--line-height-snug);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   h6 {
@@ -181,7 +181,7 @@
     font-size: var(--font-size-base);
     letter-spacing: var(--letter-spacing-wider);
     text-transform: uppercase;
-    color: var(--color-charcoal-40);
+    color: var(--color-bordeaux-40);
   }
 
   p {
@@ -189,7 +189,7 @@
     font-weight: 400;
     font-size: var(--font-size-base);
     line-height: var(--line-height-relaxed);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   a {
@@ -208,7 +208,7 @@
   select {
     font-family: var(--font-body);
     font-size: var(--font-size-sm);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     background: var(--color-white);
     border: 1.5px solid var(--color-border);
     border-radius: var(--radius-sm);
@@ -226,7 +226,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    color: var(--color-charcoal-20);
+    color: var(--color-bordeaux-20);
   }
 }
 
@@ -265,7 +265,7 @@
   /* Primary — Amber */
   .btn-primary {
     background: var(--color-amber);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
   .btn-primary:hover {
     background: var(--color-amber-dark);
@@ -284,21 +284,21 @@
   /* Outline */
   .btn-outline {
     background: transparent;
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     border: 1.5px solid var(--color-border);
     padding: 10.5px 26.5px;
   }
   .btn-outline:hover {
-    border-color: var(--color-charcoal);
+    border-color: var(--color-bordeaux);
   }
 
   /* Dark */
   .btn-dark {
-    background: var(--color-charcoal);
+    background: var(--color-bordeaux);
     color: var(--color-white);
   }
   .btn-dark:hover {
-    background: var(--color-charcoal-60);
+    background: var(--color-bordeaux-60);
   }
 
   /* Ghost */
@@ -330,7 +330,7 @@
   .btn-disabled,
   .btn[disabled] {
     background: var(--color-off-white);
-    color: var(--color-charcoal-20);
+    color: var(--color-bordeaux-20);
     cursor: not-allowed;
     pointer-events: none;
   }
@@ -363,21 +363,21 @@
   /* Status tags */
   .tag-available  { background: var(--color-vermilion-mist); color: #8C1810; }
   .tag-last-spots { background: var(--color-blush-mist);     color: #8C2020; }
-  .tag-full       { background: var(--color-off-white);      color: var(--color-charcoal-60); }
+  .tag-full       { background: var(--color-off-white);      color: var(--color-bordeaux-60); }
   .tag-new        { background: var(--color-amber-mist);     color: #8C6000; }
-  .tag-online     { background: var(--color-off-white);      color: var(--color-charcoal); }
+  .tag-online     { background: var(--color-off-white);      color: var(--color-bordeaux); }
 
   /* Category pills */
   .tag-vermilion { background: var(--color-vermilion); color: var(--color-white); }
   .tag-blush     { background: var(--color-blush);     color: var(--color-white); }
-  .tag-amber     { background: var(--color-amber);     color: var(--color-charcoal); }
-  .tag-charcoal  { background: var(--color-charcoal);  color: var(--color-white); }
+  .tag-amber     { background: var(--color-amber);     color: var(--color-bordeaux); }
+  .tag-bordeaux  { background: var(--color-bordeaux);  color: var(--color-white); }
 
   /* Outline tags */
   .tag-outline-vermilion { border: 1.5px solid var(--color-vermilion); color: var(--color-vermilion); }
   .tag-outline-blush     { border: 1.5px solid var(--color-blush);     color: var(--color-blush); }
   .tag-outline-amber     { border: 1.5px solid var(--color-amber);     color: #8C6000; }
-  .tag-outline-border    { border: 1.5px solid var(--color-border);    color: var(--color-charcoal-60); }
+  .tag-outline-border    { border: 1.5px solid var(--color-border);    color: var(--color-bordeaux-60); }
 
   /* ── Cards ──────────────────────────────────────────────── */
   .card {
@@ -404,7 +404,7 @@
     font-size: var(--font-size-xs);
     letter-spacing: var(--letter-spacing-wider);
     text-transform: uppercase;
-    color: var(--color-charcoal-20);
+    color: var(--color-bordeaux-20);
     margin-bottom: 4px;
   }
 
@@ -413,7 +413,7 @@
     font-weight: 700;
     font-size: var(--font-size-lg);
     line-height: var(--line-height-tight);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     margin-bottom: 10px;
   }
 
@@ -449,14 +449,14 @@
     font-family: var(--font-caption);
     font-size: 11px;
     letter-spacing: var(--letter-spacing-wide);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     font-weight: 300;
   }
 
   .field-hint {
     font-family: var(--font-caption);
     font-size: 11px;
-    color: var(--color-charcoal-20);
+    color: var(--color-bordeaux-20);
   }
 
   .field-error input,
@@ -497,7 +497,7 @@
     font-size: var(--font-size-xs);
     letter-spacing: var(--letter-spacing-wider);
     text-transform: uppercase;
-    color: var(--color-charcoal-40);
+    color: var(--color-bordeaux-40);
   }
 
   .type-overline {
@@ -520,7 +520,7 @@
     font-weight: 300;
     font-size: var(--font-size-sm);
     letter-spacing: var(--letter-spacing-wide);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
     text-decoration: none;
     padding: 6px 14px;
     border-radius: var(--radius-pill);
@@ -528,7 +528,7 @@
   }
   .nav-link:hover {
     background: var(--color-off-white);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 
   /* ── Section overline ───────────────────────────────────── */
@@ -538,7 +538,7 @@
     font-size: 10px;
     letter-spacing: var(--letter-spacing-widest);
     text-transform: uppercase;
-    color: var(--color-charcoal-40);
+    color: var(--color-bordeaux-40);
   }
 
   /* ── Stat number ────────────────────────────────────────── */
@@ -579,7 +579,7 @@
     font-size: var(--font-size-xs);
     letter-spacing: var(--letter-spacing-wider);
     text-transform: uppercase;
-    color: var(--color-charcoal-40);
+    color: var(--color-bordeaux-40);
   }
 
   .detail-meta-value {
@@ -587,6 +587,6 @@
     font-weight: 700;
     font-size: var(--font-size-xl);
     line-height: var(--line-height-snug);
-    color: var(--color-charcoal);
+    color: var(--color-bordeaux);
   }
 }

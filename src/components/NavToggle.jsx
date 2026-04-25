@@ -11,9 +11,9 @@ export default function NavToggle() {
         aria-label={isOpen ? 'Menu sluiten' : 'Menu openen'}
         class="flex flex-col gap-[5px] p-2"
       >
-        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
-        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
-        <span class="block w-5 h-[1.5px] bg-[var(--color-charcoal)]"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--color-bordeaux)]"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--color-bordeaux)]"></span>
+        <span class="block w-5 h-[1.5px] bg-[var(--color-bordeaux)]"></span>
       </button>
 
       {isOpen && (
