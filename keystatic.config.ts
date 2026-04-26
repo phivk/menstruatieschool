@@ -41,6 +41,7 @@ export default config({
           defaultValue: 'vermilion',
         }),
         ticketUrl: fields.text({ label: 'Ticket URL' }),
+        image: fields.url({ label: 'Afbeelding URL', validation: { isRequired: false } }),
         cardDescription: fields.text({ label: 'Kaartbeschrijving', multiline: true }),
         intro: fields.text({ label: 'Intro', multiline: true }),
         aboutParagraphs: fields.array(

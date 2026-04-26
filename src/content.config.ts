@@ -16,6 +16,7 @@ const workshops = defineCollection({
     statusLabel: z.string().optional().default('Beschikbaarheid'),
     accentColor: z.enum(['vermilion', 'amber', 'blush']),
     ticketUrl: z.string().url(),
+    image: z.string().url().optional(),
     cardDescription: z.string(),
     intro: z.string(),
     aboutParagraphs: z.array(z.string()),
