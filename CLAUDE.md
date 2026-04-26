@@ -18,7 +18,7 @@ No test or lint scripts are configured.
 
 **Routing** is file-based under `src/pages/`. Workshop detail pages are generated via `getStaticPaths` in `src/pages/workshops/[slug].astro` from the content collection.
 
-**Content** lives in `src/content/workshops/*.md` as Markdown with frontmatter. The schema is defined in `src/content/config.ts` — every frontmatter field (title, date, accentColor, statusType, ticketUrl, learnings, etc.) is validated with Zod there. Add new workshops by creating `.md` files in that folder.
+**Content** lives in `content/workshops/*.mdoc` as Markdoc with frontmatter. The schema is defined in `src/content.config.ts` — every frontmatter field (title, date, accentColor, statusType, ticketUrl, learnings, etc.) is validated with Zod there. Add new workshops by creating `.mdoc` files in that folder (or via the Keystatic CMS at `/keystatic`).
 
 **Component model:** Use `.astro` components for anything static/server-rendered. Use `.jsx` (Preact) only for interactive islands, loaded with an `client:*` directive (e.g. `client:load`). `NavToggle.jsx` is the only current interactive island.
 

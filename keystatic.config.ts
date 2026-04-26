@@ -8,7 +8,7 @@ export default config({
     workshops: collection({
       label: 'Workshops',
       slugField: 'title',
-      path: 'src/content/workshops/*',
+      path: 'content/workshops/*',
       format: { contentField: 'content' },
       schema: {
         title: fields.slug({ name: { label: 'Titel' } }),
