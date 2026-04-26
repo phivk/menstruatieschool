@@ -7,7 +7,7 @@ import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 
 export default defineConfig({
-  integrations: [preact(), react(), markdoc(), keystatic()],
+  integrations: [preact({ include: ['**/src/**/*.{js,jsx,ts,tsx}'] }), react({ include: ['**/node_modules/@keystatic/**/*.{js,jsx,ts,tsx}'] }), markdoc(), keystatic()],
   vite: {
     plugins: [tailwindcss()]
   }
