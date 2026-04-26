@@ -1,4 +1,7 @@
 node_modules/
 dist/
 .DS_Store
-.claude/settings.local.json
+.astro/
+.agents/
+.claude/
+skills-lock.json
