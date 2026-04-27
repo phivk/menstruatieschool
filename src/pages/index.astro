@@ -78,20 +78,24 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
       <!-- Right col -->
       <div class="relative">
-        <!-- Image placeholder -->
-        <div
-          class="rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-[4/5] flex items-center justify-center"
-        >
-          <div class="text-center p-8">
-            <div
-              class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4"
-            >
+        {
+          hp.heroImage ? (
+            <img
+              src={hp.heroImage}
+              alt=""
+              class="rounded-[var(--radius-xl)] w-full aspect-[4/5] object-cover"
+            />
+          ) : (
+            <div class="rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-[4/5] flex items-center justify-center">
+              <div class="text-center p-8">
+                <div class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4" />
+                <span class="type-overline text-[var(--color-bordeaux-20)]">
+                  Foto · 4:5
+                </span>
+              </div>
             </div>
-            <span class="type-overline text-[var(--color-bordeaux-20)]"
-              >Foto · 4:5</span
-            >
-          </div>
-        </div>
+          )
+        }
 
         <!-- Floating stat card -->
         <div

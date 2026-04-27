@@ -91,9 +91,10 @@ export default config({
         heroFloatingStatLabel: fields.text({
           label: "Zwevende kaart: omschrijving",
         }),
-        heroImage: fields.url({
-          label: "Hero afbeelding URL",
-          validation: { isRequired: false },
+        heroImage: fields.image({
+          label: "Hero afbeelding",
+          directory: "public/images/homepagina",
+          publicPath: "/images/homepagina/",
         }),
         aboutLabel: fields.text({ label: "Over ons: label" }),
         aboutHeadline: fields.text({
