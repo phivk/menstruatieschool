@@ -1,111 +1,179 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import WorkshopCard from '../components/WorkshopCard.astro';
-import hp from '../../content/homepagina.json';
+import { getCollection } from "astro:content";
+import { createReader } from "@keystatic/core/reader";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import WorkshopCard from "../components/WorkshopCard.astro";
+import keystaticConfig from "../../keystatic.config";
 
-const workshops = await getCollection('workshops');
+const reader = createReader(process.cwd(), keystaticConfig);
+const hp = await reader.singletons.homepagina.read();
+
+const workshops = await getCollection("workshops");
 workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 ---
 
 <BaseLayout title="De MenstruatieSchool — Leer je cyclus begrijpen">
-
   <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-[72px]">
+  <section
+    class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-[72px]"
+  >
     <div class="container-site grid md:grid-cols-2 gap-16 items-center">
-
       <!-- Left col -->
       <div>
         <!-- Badge -->
-        <div class="inline-flex items-center gap-2 bg-[var(--color-amber-mist)] rounded-[var(--radius-pill)] px-4 py-1.5 mb-6">
+        <div
+          class="inline-flex items-center gap-2 bg-[var(--color-amber-mist)] rounded-[var(--radius-pill)] px-4 py-1.5 mb-6"
+        >
           <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-amber)]"></div>
-          <span class="type-overline text-[var(--color-amber-dark)]">{hp.heroBadge}</span>
+          <span class="type-overline text-[var(--color-amber-dark)]"
+            >{hp.heroBadge}</span
+          >
         </div>
 
         <!-- Headline -->
         <h1 class="font-bold mb-5">
-          {hp.heroHeadlinePre}<br>
-          <em class="not-italic text-[var(--color-blush-dark)]">{hp.heroHeadlineEmphasis}</em><br>
+          {hp.heroHeadlinePre}<br />
+          <em class="not-italic text-[var(--color-blush-dark)]"
+            >{hp.heroHeadlineEmphasis}</em
+          ><br />
           {hp.heroHeadlinePost}
         </h1>
 
         <!-- Body -->
-        <p class="body-lg text-[var(--color-bordeaux-40)] mb-8 md:max-w-[440px]">
+        <p
+          class="body-lg text-[var(--color-bordeaux-40)] mb-8 md:max-w-[440px]"
+        >
           {hp.heroBody}
         </p>
 
         <!-- CTAs -->
         <div class="flex flex-wrap gap-3 mb-12">
-          <a href="#workshops" class="btn btn-primary btn-lg">Bekijk workshops</a>
+          <a href="#workshops" class="btn btn-primary btn-lg"
+            >Bekijk workshops</a
+          >
           <a href="#over-ons" class="btn btn-outline btn-lg">Meer over ons</a>
         </div>
 
         <!-- Stats -->
         <div class="flex gap-8">
-          {hp.heroStats.map((stat, i) => (
-            <div>
-              <div class:list={['stat-number', i === 1 && 'text-[var(--color-blush)]']}>{stat.number}</div>
-              <p class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-1 max-w-[130px] leading-snug">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          {
+            hp.heroStats.map((stat, i) => (
+              <div>
+                <div
+                  class:list={[
+                    "stat-number",
+                    i === 1 && "text-[var(--color-blush)]",
+                  ]}
+                >
+                  {stat.number}
+                </div>
+                <p class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-1 max-w-[130px] leading-snug">
+                  {stat.label}
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
 
       <!-- Right col -->
       <div class="relative">
         <!-- Image placeholder -->
-        <div class="rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-[4/5] flex items-center justify-center">
+        <div
+          class="rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-[4/5] flex items-center justify-center"
+        >
           <div class="text-center p-8">
-            <div class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4"></div>
-            <span class="type-overline text-[var(--color-bordeaux-20)]">Foto · 4:5</span>
+            <div
+              class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4"
+            >
+            </div>
+            <span class="type-overline text-[var(--color-bordeaux-20)]"
+              >Foto · 4:5</span
+            >
           </div>
         </div>
 
         <!-- Floating stat card -->
-        <div class="hidden md:block absolute -bottom-5 -left-5 bg-white rounded-[var(--radius-lg)] px-5 py-4 shadow-[var(--shadow-2)] border border-[var(--color-border-subtle)]">
-          <div class="font-[Urbanist] font-bold text-[22px] text-[var(--color-bordeaux)] leading-tight">{hp.heroFloatingStatNumber}</div>
-          <div class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-0.5">{hp.heroFloatingStatLabel}</div>
+        <div
+          class="hidden md:block absolute -bottom-5 -left-5 bg-white rounded-[var(--radius-lg)] px-5 py-4 shadow-[var(--shadow-2)] border border-[var(--color-border-subtle)]"
+        >
+          <div
+            class="font-[Urbanist] font-bold text-[22px] text-[var(--color-bordeaux)] leading-tight"
+          >
+            {hp.heroFloatingStatNumber}
+          </div>
+          <div
+            class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-0.5"
+          >
+            {hp.heroFloatingStatLabel}
+          </div>
         </div>
 
         <!-- Decorative blob -->
-        <div class="hidden md:block absolute -top-4 -right-4 w-14 h-14 rounded-full bg-[var(--color-blush)] opacity-25"></div>
+        <div
+          class="hidden md:block absolute -top-4 -right-4 w-14 h-14 rounded-full bg-[var(--color-blush)] opacity-25"
+        >
+        </div>
       </div>
-
     </div>
   </section>
 
   <!-- ── About / Manifesto ─────────────────────────────────── -->
-  <section id="over-ons" class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20">
+  <section
+    id="over-ons"
+    class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
     <div class="container-site">
       <p class="section-overline mb-4">{hp.aboutLabel}</p>
 
       <div class="grid md:grid-cols-2 gap-16 items-start">
-
         <!-- Left: text -->
         <div>
-          <h2 class="font-bold mb-5" set:html={hp.aboutHeadline?.replace(/\n/g, '<br>')} />
-          {hp.aboutBody.map((paragraph, i) => (
-            <p class:list={['body-lg text-[var(--color-bordeaux-40)]', i < (hp.aboutBody.length - 1) && 'mb-4']}>
-              {paragraph}
-            </p>
-          ))}
+          <h2
+            class="font-bold mb-5"
+            set:html={hp.aboutHeadline?.replace(/\n/g, "<br>")}
+          />
+          {
+            hp.aboutBody.map((paragraph, i) => (
+              <p
+                class:list={[
+                  "body-lg text-[var(--color-bordeaux-40)]",
+                  i < hp.aboutBody.length - 1 && "mb-4",
+                ]}
+              >
+                {paragraph}
+              </p>
+            ))
+          }
         </div>
 
         <!-- Right: value cards -->
-        {(() => {
-          const borderColors = ['var(--color-amber)', 'var(--color-blush)', 'var(--color-vermilion)'];
-          return <div class="flex flex-col gap-3">
-            {hp.aboutValues.map((value, i) => (
-              <div class="value-card border-l-[3px]" style={`border-left-color: ${borderColors[i % borderColors.length]}`}>
-                <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">{value.title}</div>
-                <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">{value.description}</p>
+        {
+          (() => {
+            const borderColors = [
+              "var(--color-amber)",
+              "var(--color-blush)",
+              "var(--color-vermilion)",
+            ];
+            return (
+              <div class="flex flex-col gap-3">
+                {hp.aboutValues.map((value, i) => (
+                  <div
+                    class="value-card border-l-[3px]"
+                    style={`border-left-color: ${borderColors[i % borderColors.length]}`}
+                  >
+                    <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">
+                      {value.title}
+                    </div>
+                    <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>;
-        })()}
-
+            );
+          })()
+        }
       </div>
     </div>
   </section>
@@ -121,23 +189,33 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
       </div>
 
       <blockquote class="max-w-[680px] mx-auto mb-6">
-        <p class="type-display text-[clamp(18px,2.6vw,28px)] leading-relaxed text-[#F5F0E8] italic font-[200]">
+        <p
+          class="type-display text-[clamp(18px,2.6vw,28px)] leading-relaxed text-[#F5F0E8] italic font-[200]"
+        >
           "{hp.quoteText}"
         </p>
       </blockquote>
 
-      <cite class="not-italic type-overline text-[var(--color-amber)]">{hp.quoteAttribution}</cite>
+      <cite class="not-italic type-overline text-[var(--color-amber)]"
+        >{hp.quoteAttribution}</cite
+      >
     </div>
   </section>
 
   <!-- ── Workshops ──────────────────────────────────────────── -->
-  <section id="workshops" class="bg-white border-t border-[var(--color-border-subtle)] py-12 md:py-20">
+  <section
+    id="workshops"
+    class="bg-white border-t border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
     <div class="container-site">
-
       <!-- Section header -->
-      <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-10">
+      <div
+        class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-10"
+      >
         <div>
-          <p class="section-overline text-[var(--color-amber-dark)] mb-3">Aankomende programma's</p>
+          <p class="section-overline text-[var(--color-amber-dark)] mb-3">
+            Aankomende programma's
+          </p>
           <h2 class="font-bold">Workshops &amp; lessen</h2>
         </div>
         <a href="#" class="btn btn-outline btn-sm">Alle workshops →</a>
@@ -145,9 +223,7 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
       <!-- Cards grid -->
       <div class="grid md:grid-cols-2 gap-5">
-        {workshops.map(workshop => (
-          <WorkshopCard workshop={workshop} />
-        ))}
+        {workshops.map((workshop) => <WorkshopCard workshop={workshop} />)}
       </div>
     </div>
   </section>
@@ -155,22 +231,31 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   <!-- ── Newsletter ─────────────────────────────────────────── -->
   <section class="bg-[var(--color-bg-inverse)] py-12 md:py-20">
     <div class="container-site max-w-[560px] text-center">
-      <p class="section-overline text-[var(--color-amber)] mb-4">{hp.newsletterLabel}</p>
-      <h2 class="font-bold text-white mb-4" set:html={hp.newsletterHeadline?.replace(/\n/g, '<br>')} />
+      <p class="section-overline text-[var(--color-amber)] mb-4">
+        {hp.newsletterLabel}
+      </p>
+      <h2
+        class="font-bold text-white mb-4"
+        set:html={hp.newsletterHeadline?.replace(/\n/g, "<br>")}
+      />
       <p class="body-lg mb-8" style="color: var(--color-bordeaux-60)">
         {hp.newsletterBody}
       </p>
 
-      <form data-placeholder="emailoctopus" class="flex flex-col gap-2 sm:flex-row max-w-[420px] mx-auto">
+      <form
+        data-placeholder="emailoctopus"
+        class="flex flex-col gap-2 sm:flex-row max-w-[420px] mx-auto"
+      >
         <input
           type="email"
           placeholder="jij@voorbeeld.nl"
           required
           style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #fff; flex: 1;"
+        />
+        <button type="submit" class="btn btn-primary w-full sm:w-auto shrink-0"
+          >Aanmelden</button
         >
-        <button type="submit" class="btn btn-primary w-full sm:w-auto shrink-0">Aanmelden</button>
       </form>
     </div>
   </section>
-
 </BaseLayout>
