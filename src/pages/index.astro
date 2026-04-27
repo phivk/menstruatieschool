@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import { createReader } from "@keystatic/core/reader";
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import WorkshopCard from "../components/WorkshopCard.astro";
 import keystaticConfig from "../../keystatic.config";
@@ -81,9 +82,11 @@ const featuredWorkshops = workshops.slice(0, 4);
       <div class="relative">
         {
           hp.heroImage ? (
-            <img
+            <Image
               src={hp.heroImage}
               alt=""
+              width={800}
+              height={1000}
               class="rounded-[var(--radius-xl)] w-full aspect-[4/5] object-cover"
             />
           ) : (
