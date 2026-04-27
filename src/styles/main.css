@@ -131,6 +131,7 @@
     font-size: var(--font-size-base);
     line-height: var(--line-height-normal);
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
 
   h1 {
