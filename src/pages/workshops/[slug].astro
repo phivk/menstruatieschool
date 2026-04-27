@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const workshops = await getCollection('workshops');
-  return workshops.map(entry => ({
+  const workshops = await getCollection("workshops");
+  return workshops.map((entry) => ({
     params: { slug: entry.id },
     props: { entry },
   }));
@@ -14,51 +14,50 @@ const { entry } = Astro.props;
 const { data } = entry;
 
 const accentBarColor = {
-  vermilion: 'bg-[var(--color-vermilion)]',
-  amber:     'bg-[var(--color-amber)]',
-  blush:     'bg-[var(--color-blush)]',
+  vermilion: "bg-[var(--color-vermilion)]",
+  amber: "bg-[var(--color-amber)]",
+  blush: "bg-[var(--color-blush)]",
 }[data.accentColor];
 
 const badgeBg = {
-  vermilion: 'bg-[var(--color-vermilion-mist)]',
-  amber:     'bg-[var(--color-amber-mist)]',
-  blush:     'bg-[var(--color-blush-mist)]',
+  vermilion: "bg-[var(--color-vermilion-mist)]",
+  amber: "bg-[var(--color-amber-mist)]",
+  blush: "bg-[var(--color-blush-mist)]",
 }[data.accentColor];
 
 const badgeDotColor = {
-  vermilion: 'bg-[var(--color-vermilion)]',
-  amber:     'bg-[var(--color-amber)]',
-  blush:     'bg-[var(--color-blush)]',
+  vermilion: "bg-[var(--color-vermilion)]",
+  amber: "bg-[var(--color-amber)]",
+  blush: "bg-[var(--color-blush)]",
 }[data.accentColor];
 
 const badgeTextColor = {
-  vermilion: 'text-[#8C1810]',
-  amber:     'text-[var(--color-amber-dark)]',
-  blush:     'text-[var(--color-blush-dark)]',
+  vermilion: "text-[#8C1810]",
+  amber: "text-[var(--color-amber-dark)]",
+  blush: "text-[var(--color-blush-dark)]",
 }[data.accentColor];
 
 const bulletDotColor = {
-  vermilion: 'bg-[var(--color-vermilion)]',
-  amber:     'bg-[var(--color-amber)]',
-  blush:     'bg-[var(--color-blush)]',
+  vermilion: "bg-[var(--color-vermilion)]",
+  amber: "bg-[var(--color-amber)]",
+  blush: "bg-[var(--color-blush)]",
 }[data.accentColor];
 
 const cardInfoClass = {
-  vermilion: 'card-info-vermilion',
-  amber:     'card-info-amber',
-  blush:     'card-info-amber',
+  vermilion: "card-info-vermilion",
+  amber: "card-info-amber",
+  blush: "card-info-amber",
 }[data.accentColor];
 
 const statusTagClass = {
-  available:    'tag-available',
-  new:          'tag-new',
-  'last-spots': 'tag-last-spots',
-  full:         'tag-full',
+  available: "tag-available",
+  new: "tag-new",
+  "last-spots": "tag-last-spots",
+  full: "tag-full",
 }[data.statusType];
 ---
 
 <BaseLayout title={`${data.title} — De MenstruatieSchool`}>
-
   <!-- ── Workshop hero ─────────────────────────────────────── -->
   <section class="bg-white border-b border-[var(--color-border-subtle)] py-16">
     <div class="container-site">
@@ -66,7 +65,9 @@ const statusTagClass = {
       <div class={`h-1 w-16 rounded-full ${accentBarColor} mb-6`}></div>
 
       <!-- Badge -->
-      <div class={`inline-flex items-center gap-2 ${badgeBg} rounded-[var(--radius-pill)] px-4 py-1.5 mb-5`}>
+      <div
+        class={`inline-flex items-center gap-2 ${badgeBg} rounded-[var(--radius-pill)] px-4 py-1.5 mb-5`}
+      >
         <div class={`w-1.5 h-1.5 rounded-full ${badgeDotColor}`}></div>
         <span class={`type-overline ${badgeTextColor}`}>{data.badge}</span>
       </div>
@@ -81,34 +82,46 @@ const statusTagClass = {
 
   <!-- ── Content + Sidebar ─────────────────────────────────── -->
   <section class="py-16">
-    <div class="container-site grid md:grid-cols-[1fr_300px] gap-12 items-start">
-
+    <div
+      class="container-site grid md:grid-cols-[1fr_300px] gap-12 items-start"
+    >
       <!-- Main content -->
       <div>
         <h2 class="font-bold mb-5">Over deze workshop</h2>
-        {data.aboutParagraphs.map((paragraph, i) => (
-          <p class={`body-lg text-[var(--color-bordeaux-40)] ${i < data.aboutParagraphs.length - 1 ? 'mb-4' : 'mb-10'}`}>
-            {paragraph}
-          </p>
-        ))}
+        {
+          data.aboutParagraphs.map((paragraph, i) => (
+            <p
+              class={`body-lg text-[var(--color-bordeaux-40)] ${i < data.aboutParagraphs.length - 1 ? "mb-4" : "mb-10"}`}
+            >
+              {paragraph}
+            </p>
+          ))
+        }
 
         <h3 class="font-bold mb-5">Wat je meeneemt</h3>
         <ul class="flex flex-col gap-3 mb-12">
-          {data.learnings.map(learning => (
-            <li class="flex items-start gap-3">
-              <span class={`mt-[6px] shrink-0 w-2 h-2 rounded-full ${bulletDotColor}`}></span>
-              <span class="type-body text-[var(--color-bordeaux-40)]">{learning}</span>
-            </li>
-          ))}
+          {
+            data.learnings.map((learning) => (
+              <li class="flex items-start gap-3">
+                <span
+                  class={`mt-[6px] shrink-0 w-2 h-2 rounded-full ${bulletDotColor}`}
+                />
+                <span class="type-body text-[var(--color-bordeaux-40)]">
+                  {learning}
+                </span>
+              </li>
+            ))
+          }
         </ul>
 
-        <a href="/#workshops" class="btn btn-ghost">← Terug naar alle workshops</a>
+        <a href="/#workshops" class="btn btn-ghost"
+          >← Terug naar alle workshops</a
+        >
       </div>
 
       <!-- Sidebar -->
       <aside class="sticky top-20">
         <div class={`${cardInfoClass} flex flex-col gap-5`}>
-
           <div>
             <p class="detail-meta-label mb-1">Datum</p>
             <p class="detail-meta-value">{data.displayDate}</p>
@@ -139,12 +152,10 @@ const statusTagClass = {
             target="_blank"
             rel="noopener"
             class="btn btn-primary btn-lg w-full justify-center"
-          >Koop je ticket</a>
-
+            >Koop je ticket</a
+          >
         </div>
       </aside>
-
     </div>
   </section>
-
 </BaseLayout>

@@ -25,7 +25,7 @@ storage: {
 +   repo: {
 +     owner: REPO_OWNER,
 +     name: REPO_NAME
-+   }   
++   }
 }
 ```
 
@@ -44,8 +44,6 @@ With `github` mode on, visit the `/keystatic` route. You will be prompted to log
 
 The first time you click this button will initiate the setup process:
 
-
-
 If you happen to know the URL of your deployed project and/or the GitHub repo is owned by a GitHub organization, you can fill in those fields.
 
 Otherwise, leave them blank and click on "Create GitHub App".
@@ -57,8 +55,6 @@ The next step will walk you through creating a GitHub App. Choose a name for you
 [Grant repo access](#grant-repo-access)
 
 Next, you will need to grant this new GitHub App access to your GitHub repo:
-
-
 
 Finally, you will be taken back to your local Keystatic Admin UI... running in `github` mode!
 
@@ -96,7 +92,7 @@ storage: {
 
 Keystatic will only list branches starting with `my-prefix/` in the Admin UI, and will only let you create new branches with that prefix.
 
-[Add redirect\_uri](#add)
+[Add redirect_uri](#add)
 
 When you authorize on a server and get the following error from GitHub, you need to modify the GitHub application settings.
 
@@ -104,12 +100,12 @@ When you authorize on a server and get the following error from GitHub, you need
 
 To add a redirect URL:
 
-1. Go to the [list of "Installed Github Apps"](https://docs.github.com/en/apps/using-github-apps/reviewing-and-modifying-installed-github-apps#navigating-to-the-github-app-you-want-to-review-or-modify)  
-   * For Users: <https://github.com/settings/installations>  
-   * For Organisations: `https://github.com/organizations/<org name>/settings/installations`
-2. Select the app > Choose "App settings"  
-   * For Users: `https://github.com/settings/apps/<app slug>`  
-   * For Organisations: `https://github.com/organizations/<org name>/settings/apps/<app slug>`
+1. Go to the [list of "Installed Github Apps"](https://docs.github.com/en/apps/using-github-apps/reviewing-and-modifying-installed-github-apps#navigating-to-the-github-app-you-want-to-review-or-modify)
+   - For Users: <https://github.com/settings/installations>
+   - For Organisations: `https://github.com/organizations/<org name>/settings/installations`
+2. Select the app > Choose "App settings"
+   - For Users: `https://github.com/settings/apps/<app slug>`
+   - For Organisations: `https://github.com/organizations/<org name>/settings/apps/<app slug>`
 3. Use "Add Callback URL" > Add the additional URL > Save
 
 Now try reloading the authentication page.
@@ -124,8 +120,8 @@ Coming soon 🚧
 
 The process of deploying Keystatic can vary based on where you're deploying, but here's the **TL;DR**:
 
-* Copy the Keystatic environment variables over to your deployed environment,
-* Make sure the host can run Node.js for Keystatic's API routes.
+- Copy the Keystatic environment variables over to your deployed environment,
+- Make sure the host can run Node.js for Keystatic's API routes.
 
 ---
 
@@ -135,16 +131,16 @@ This segment of the [Keystatic Mini-Course on YouTube](https://www.youtube.com/p
 
 ## On this page
 
-* [Overview](#heading-1-overview)
-* [Setting up GitHub mode](#setting-up-git-hub-mode)
-* [Connecting with GitHub](#connecting-with-git-hub)
-* [Create a custom GitHub App](#create-a-custom-git-hub-app)
-* [Grant repo access](#grant-repo-access)
-* [New environment variables](#new-environment-variables)
-* [Branch prefix](#branch-prefix)
-* [Add ](#add)
-* [Deploying Keystatic](#deploying-keystatic)
-* [Screencast walk-through](#screencast-walk-through)
+- [Overview](#heading-1-overview)
+- [Setting up GitHub mode](#setting-up-git-hub-mode)
+- [Connecting with GitHub](#connecting-with-git-hub)
+- [Create a custom GitHub App](#create-a-custom-git-hub-app)
+- [Grant repo access](#grant-repo-access)
+- [New environment variables](#new-environment-variables)
+- [Branch prefix](#branch-prefix)
+- [Add ](#add)
+- [Deploying Keystatic](#deploying-keystatic)
+- [Screencast walk-through](#screencast-walk-through)
 
 ---
 

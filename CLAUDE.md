@@ -8,6 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev       # start dev server (localhost:4321)
 pnpm build     # static build → dist/
 pnpm preview   # preview the dist/ build
+pnpm format    # format all files with Prettier
 ```
 
 No test or lint scripts are configured.
