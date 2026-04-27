@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
 
 export default config({
   storage: {
@@ -53,6 +53,47 @@ export default config({
           { label: 'Leermomenten', itemLabel: (props) => props.value || 'Leermoment' },
         ),
         content: fields.markdoc({ label: 'Inhoud' }),
+      },
+    }),
+  },
+  singletons: {
+    homepagina: singleton({
+      label: 'Homepagina',
+      path: 'content/homepagina',
+      schema: {
+        heroBadge: fields.text({ label: 'Hero badge' }),
+        heroHeadlinePre: fields.text({ label: 'Hero koptekst: begin' }),
+        heroHeadlineEmphasis: fields.text({ label: 'Hero koptekst: nadruk' }),
+        heroHeadlinePost: fields.text({ label: 'Hero koptekst: einde' }),
+        heroBody: fields.text({ label: 'Hero introductie', multiline: true }),
+        heroStats: fields.array(
+          fields.object({
+            number: fields.text({ label: 'Getal' }),
+            label: fields.text({ label: 'Omschrijving' }),
+          }),
+          { label: 'Hero statistieken', itemLabel: (props) => props.fields.number.value || 'Statistiek' }
+        ),
+        heroFloatingStatNumber: fields.text({ label: 'Zwevende kaart: getal' }),
+        heroFloatingStatLabel: fields.text({ label: 'Zwevende kaart: omschrijving' }),
+        heroImage: fields.url({ label: 'Hero afbeelding URL', validation: { isRequired: false } }),
+        aboutLabel: fields.text({ label: 'Over ons: label' }),
+        aboutHeadline: fields.text({ label: 'Over ons: koptekst', multiline: true }),
+        aboutBody: fields.array(
+          fields.text({ label: 'Alinea', multiline: true }),
+          { label: 'Over ons: tekst', itemLabel: (props) => props.value?.slice(0, 40) || 'Alinea' }
+        ),
+        aboutValues: fields.array(
+          fields.object({
+            title: fields.text({ label: 'Titel' }),
+            description: fields.text({ label: 'Omschrijving' }),
+          }),
+          { label: 'Waarden', itemLabel: (props) => props.fields.title.value || 'Waarde' }
+        ),
+        quoteText: fields.text({ label: 'Citaat', multiline: true }),
+        quoteAttribution: fields.text({ label: 'Citaat: toeschrijving' }),
+        newsletterLabel: fields.text({ label: 'Nieuwsbrief: label' }),
+        newsletterHeadline: fields.text({ label: 'Nieuwsbrief: koptekst', multiline: true }),
+        newsletterBody: fields.text({ label: 'Nieuwsbrief: tekst', multiline: true }),
       },
     }),
   },

@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import WorkshopCard from '../components/WorkshopCard.astro';
+import hp from '../../content/homepagina.json';
 
 const workshops = await getCollection('workshops');
 workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
@@ -18,19 +19,19 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
         <!-- Badge -->
         <div class="inline-flex items-center gap-2 bg-[var(--color-amber-mist)] rounded-[var(--radius-pill)] px-4 py-1.5 mb-6">
           <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-amber)]"></div>
-          <span class="type-overline text-[var(--color-amber-dark)]">Laagdrempelig · In je buurt</span>
+          <span class="type-overline text-[var(--color-amber-dark)]">{hp.heroBadge}</span>
         </div>
 
         <!-- Headline -->
         <h1 class="font-bold mb-5">
-          Leer je<br>
-          <em class="not-italic text-[var(--color-blush-dark)]">eigen cyclus</em><br>
-          begrijpen.
+          {hp.heroHeadlinePre}<br>
+          <em class="not-italic text-[var(--color-blush-dark)]">{hp.heroHeadlineEmphasis}</em><br>
+          {hp.heroHeadlinePost}
         </h1>
 
         <!-- Body -->
         <p class="body-lg text-[var(--color-bordeaux-40)] mb-8 md:max-w-[440px]">
-          Kwalitatieve workshops over de menstruatiecyclus — toegankelijk, zonder taboe, en in je eigen buurt.
+          {hp.heroBody}
         </p>
 
         <!-- CTAs -->
@@ -41,18 +42,14 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
         <!-- Stats -->
         <div class="flex gap-8">
-          <div>
-            <div class="stat-number">2.400</div>
-            <p class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-1 max-w-[120px] leading-snug">
-              dagen menstrueert een vrouw gemiddeld
-            </p>
-          </div>
-          <div>
-            <div class="stat-number text-[var(--color-blush)]">80%</div>
-            <p class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-1 max-w-[130px] leading-snug">
-              ervaart hormoongerelateerde klachten
-            </p>
-          </div>
+          {hp.heroStats.map((stat, i) => (
+            <div>
+              <div class:list={['stat-number', i === 1 && 'text-[var(--color-blush)]']}>{stat.number}</div>
+              <p class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-1 max-w-[130px] leading-snug">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -68,8 +65,8 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
         <!-- Floating stat card -->
         <div class="hidden md:block absolute -bottom-5 -left-5 bg-white rounded-[var(--radius-lg)] px-5 py-4 shadow-[var(--shadow-2)] border border-[var(--color-border-subtle)]">
-          <div class="font-[Urbanist] font-bold text-[22px] text-[var(--color-bordeaux)] leading-tight">6,5 jaar</div>
-          <div class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-0.5">gemiddeld per vrouw</div>
+          <div class="font-[Urbanist] font-bold text-[22px] text-[var(--color-bordeaux)] leading-tight">{hp.heroFloatingStatNumber}</div>
+          <div class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-0.5">{hp.heroFloatingStatLabel}</div>
         </div>
 
         <!-- Decorative blob -->
@@ -82,38 +79,32 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   <!-- ── About / Manifesto ─────────────────────────────────── -->
   <section id="over-ons" class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20">
     <div class="container-site">
-      <p class="section-overline mb-4">Onze missie</p>
+      <p class="section-overline mb-4">{hp.aboutLabel}</p>
 
       <div class="grid md:grid-cols-2 gap-16 items-start">
 
         <!-- Left: text -->
         <div>
-          <h2 class="font-bold mb-5">
-            Kennis die jou<br>in je kracht zet
-          </h2>
-          <p class="body-lg text-[var(--color-bordeaux-40)] mb-4">
-            Een groot deel van de last die menstruerende personen ervaren blijft onnodig lang onzichtbaar — door taboe, een gebrek aan kwalitatieve educatie en het normaliseren van klachten.
-          </p>
-          <p class="body-lg text-[var(--color-bordeaux-40)]">
-            Met De MenstruatieSchool bieden we toepasbare kennis die taboes doorbreekt. Op korte termijn meer rust en zelfvertrouwen. Op lange termijn betere gezondheid en emancipatie.
-          </p>
+          <h2 class="font-bold mb-5" set:html={hp.aboutHeadline?.replace(/\n/g, '<br>')} />
+          {hp.aboutBody.map((paragraph, i) => (
+            <p class:list={['body-lg text-[var(--color-bordeaux-40)]', i < (hp.aboutBody.length - 1) && 'mb-4']}>
+              {paragraph}
+            </p>
+          ))}
         </div>
 
         <!-- Right: value cards -->
-        <div class="flex flex-col gap-3">
-          <div class="value-card border-l-[3px] border-l-[var(--color-amber)]">
-            <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">Laagdrempelig</div>
-            <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">Workshops in je eigen buurt, voor iedereen.</p>
-          </div>
-          <div class="value-card border-l-[3px] border-l-[var(--color-blush)]">
-            <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">Kwalitatief</div>
-            <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">Onderbouwde kennis, geen hype of taboe.</p>
-          </div>
-          <div class="value-card border-l-[3px] border-l-[var(--color-vermilion)]">
-            <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">Verbindend</div>
-            <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">Meer taal, meer begrip, meer ruimte voor steun.</p>
-          </div>
-        </div>
+        {(() => {
+          const borderColors = ['var(--color-amber)', 'var(--color-blush)', 'var(--color-vermilion)'];
+          return <div class="flex flex-col gap-3">
+            {hp.aboutValues.map((value, i) => (
+              <div class="value-card border-l-[3px]" style={`border-left-color: ${borderColors[i % borderColors.length]}`}>
+                <div class="font-[Urbanist] font-bold text-[16px] text-[var(--color-bordeaux)] mb-1">{value.title}</div>
+                <p class="type-body text-[14px] text-[var(--color-bordeaux-40)] leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>;
+        })()}
 
       </div>
     </div>
@@ -131,11 +122,11 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 
       <blockquote class="max-w-[680px] mx-auto mb-6">
         <p class="type-display text-[clamp(18px,2.6vw,28px)] leading-relaxed text-[#F5F0E8] italic font-[200]">
-          "Wanneer vrouwen beter begrijpen hoe hun cyclus werkt, ontstaat er meer rust, meer zelfvertrouwen — en meer ruimte voor het leven dat ze willen leiden."
+          "{hp.quoteText}"
         </p>
       </blockquote>
 
-      <cite class="not-italic type-overline text-[var(--color-amber)]">De MenstruatieSchool</cite>
+      <cite class="not-italic type-overline text-[var(--color-amber)]">{hp.quoteAttribution}</cite>
     </div>
   </section>
 
@@ -164,10 +155,10 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   <!-- ── Newsletter ─────────────────────────────────────────── -->
   <section class="bg-[var(--color-bg-inverse)] py-12 md:py-20">
     <div class="container-site max-w-[560px] text-center">
-      <p class="section-overline text-[var(--color-amber)] mb-4">Blijf op de hoogte</p>
-      <h2 class="font-bold text-white mb-4">Nieuwe workshops<br>als eerste weten?</h2>
+      <p class="section-overline text-[var(--color-amber)] mb-4">{hp.newsletterLabel}</p>
+      <h2 class="font-bold text-white mb-4" set:html={hp.newsletterHeadline?.replace(/\n/g, '<br>')} />
       <p class="body-lg mb-8" style="color: var(--color-bordeaux-60)">
-        Schrijf je in voor de nieuwsbrief en ontvang updates over nieuwe workshops, kennis en agenda.
+        {hp.newsletterBody}
       </p>
 
       <form data-placeholder="emailoctopus" class="flex flex-col gap-2 sm:flex-row max-w-[420px] mx-auto">
