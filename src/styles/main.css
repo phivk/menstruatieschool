@@ -136,7 +136,7 @@
   h1 {
     font-family: var(--font-display);
     font-weight: 200;
-    font-size: var(--font-size-5xl);
+    font-size: clamp(2.25rem, 8vw, 5rem);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
     color: var(--color-bordeaux);
@@ -145,7 +145,7 @@
   h2 {
     font-family: var(--font-display);
     font-weight: 200;
-    font-size: var(--font-size-4xl);
+    font-size: clamp(1.75rem, 6vw, 3.5rem);
     line-height: var(--line-height-tight);
     letter-spacing: var(--letter-spacing-tight);
     color: var(--color-bordeaux);
@@ -545,7 +545,7 @@
   .stat-number {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: var(--font-size-4xl);
+    font-size: clamp(2rem, 7vw, 3.5rem);
     line-height: var(--line-height-tight);
     color: var(--color-amber);
   }

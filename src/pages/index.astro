@@ -10,7 +10,7 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 <BaseLayout title="De MenstruatieSchool — Leer je cyclus begrijpen">
 
   <!-- ── Hero ─────────────────────────────────────────────── -->
-  <section class="bg-white border-b border-[var(--color-border-subtle)] py-[72px]">
+  <section class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-[72px]">
     <div class="container-site grid md:grid-cols-2 gap-16 items-center">
 
       <!-- Left col -->
@@ -29,7 +29,7 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
         </h1>
 
         <!-- Body -->
-        <p class="body-lg text-[var(--color-bordeaux-40)] mb-8 max-w-[440px]">
+        <p class="body-lg text-[var(--color-bordeaux-40)] mb-8 md:max-w-[440px]">
           Kwalitatieve workshops over de menstruatiecyclus — toegankelijk, zonder taboe, en in je eigen buurt.
         </p>
 
@@ -67,20 +67,20 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
         </div>
 
         <!-- Floating stat card -->
-        <div class="absolute -bottom-5 -left-5 bg-white rounded-[var(--radius-lg)] px-5 py-4 shadow-[var(--shadow-2)] border border-[var(--color-border-subtle)]">
+        <div class="hidden md:block absolute -bottom-5 -left-5 bg-white rounded-[var(--radius-lg)] px-5 py-4 shadow-[var(--shadow-2)] border border-[var(--color-border-subtle)]">
           <div class="font-[Urbanist] font-bold text-[22px] text-[var(--color-bordeaux)] leading-tight">6,5 jaar</div>
           <div class="type-caption text-[var(--color-bordeaux-40)] text-[12px] mt-0.5">gemiddeld per vrouw</div>
         </div>
 
         <!-- Decorative blob -->
-        <div class="absolute -top-4 -right-4 w-14 h-14 rounded-full bg-[var(--color-blush)] opacity-25"></div>
+        <div class="hidden md:block absolute -top-4 -right-4 w-14 h-14 rounded-full bg-[var(--color-blush)] opacity-25"></div>
       </div>
 
     </div>
   </section>
 
   <!-- ── About / Manifesto ─────────────────────────────────── -->
-  <section id="over-ons" class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-20">
+  <section id="over-ons" class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20">
     <div class="container-site">
       <p class="section-overline mb-4">Onze missie</p>
 
@@ -120,7 +120,7 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   </section>
 
   <!-- ── Quote band ─────────────────────────────────────────── -->
-  <section class="bg-[var(--color-bg-inverse)] py-[72px] text-center">
+  <section class="bg-[var(--color-bg-inverse)] py-12 md:py-[72px] text-center">
     <div class="container-site">
       <!-- Color bars -->
       <div class="flex gap-1.5 justify-center mb-7">
@@ -140,11 +140,11 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   </section>
 
   <!-- ── Workshops ──────────────────────────────────────────── -->
-  <section id="workshops" class="bg-white border-t border-[var(--color-border-subtle)] py-20">
+  <section id="workshops" class="bg-white border-t border-[var(--color-border-subtle)] py-12 md:py-20">
     <div class="container-site">
 
       <!-- Section header -->
-      <div class="flex items-end justify-between mb-10">
+      <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-10">
         <div>
           <p class="section-overline text-[var(--color-amber-dark)] mb-3">Aankomende programma's</p>
           <h2 class="font-bold">Workshops &amp; lessen</h2>
@@ -162,7 +162,7 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
   </section>
 
   <!-- ── Newsletter ─────────────────────────────────────────── -->
-  <section class="bg-[var(--color-bg-inverse)] py-20">
+  <section class="bg-[var(--color-bg-inverse)] py-12 md:py-20">
     <div class="container-site max-w-[560px] text-center">
       <p class="section-overline text-[var(--color-amber)] mb-4">Blijf op de hoogte</p>
       <h2 class="font-bold text-white mb-4">Nieuwe workshops<br>als eerste weten?</h2>
@@ -170,14 +170,14 @@ workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
         Schrijf je in voor de nieuwsbrief en ontvang updates over nieuwe workshops, kennis en agenda.
       </p>
 
-      <form data-placeholder="emailoctopus" class="flex gap-2 max-w-[420px] mx-auto">
+      <form data-placeholder="emailoctopus" class="flex flex-col gap-2 sm:flex-row max-w-[420px] mx-auto">
         <input
           type="email"
           placeholder="jij@voorbeeld.nl"
           required
           style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); color: #fff; flex: 1;"
         >
-        <button type="submit" class="btn btn-primary shrink-0">Aanmelden</button>
+        <button type="submit" class="btn btn-primary w-full sm:w-auto shrink-0">Aanmelden</button>
       </form>
     </div>
   </section>
