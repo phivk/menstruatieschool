@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import WorkshopCard from "../../components/WorkshopCard.astro";
+
+const workshops = await getCollection("workshops");
+workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
+---
+
+<BaseLayout title="Workshops & lessen — De MenstruatieSchool">
+  <section class="bg-white py-12 md:py-20">
+    <div class="container-site">
+      <div class="mb-10">
+        <p class="section-overline text-[var(--color-amber-dark)] mb-3">
+          Aankomende programma's
+        </p>
+        <h1 class="font-bold">Workshops &amp; lessen</h1>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-5">
+        {workshops.map((workshop) => <WorkshopCard workshop={workshop} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
