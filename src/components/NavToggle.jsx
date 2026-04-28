@@ -18,13 +18,13 @@ export default function NavToggle() {
 
       {isOpen && (
         <nav class="absolute top-[60px] left-0 right-0 bg-white border-b border-[var(--color-border-subtle)] flex flex-col p-4 z-50 shadow-[var(--shadow-2)]">
-          <a href="/#workshops" class="nav-link">
+          <a href="/workshops" class="nav-link">
             Workshops
           </a>
-          <a href="/#over-ons" class="nav-link">
+          <a href="/over-ons" class="nav-link">
             Over ons
           </a>
-          <a href="/#workshops" class="btn btn-dark btn-sm mt-3 self-start">
+          <a href="/workshops" class="btn btn-dark btn-sm mt-3 self-start">
             Aanmelden
           </a>
         </nav>

@@ -68,6 +68,32 @@ export default config({
     }),
   },
   singletons: {
+    overOns: singleton({
+      label: "Over ons",
+      path: "content/over-ons",
+      schema: {
+        label: fields.text({ label: "Sectie-label" }),
+        headline: fields.text({ label: "Koptekst", multiline: true }),
+        body: fields.array(
+          fields.text({ label: "Alinea", multiline: true }),
+          {
+            label: "Tekst",
+            itemLabel: (props) => props.value?.slice(0, 40) || "Alinea",
+          },
+        ),
+        values: fields.array(
+          fields.object({
+            title: fields.text({ label: "Titel" }),
+            description: fields.text({ label: "Omschrijving" }),
+          }),
+          {
+            label: "Waarden",
+            itemLabel: (props) => props.fields.title.value || "Waarde",
+          },
+        ),
+        linkLabel: fields.text({ label: "Link tekst" }),
+      },
+    }),
     homepagina: singleton({
       label: "Homepagina",
       path: "content/homepagina",
@@ -96,28 +122,6 @@ export default config({
           directory: "public/images/homepagina",
           publicPath: "/images/homepagina/",
         }),
-        aboutLabel: fields.text({ label: "Over ons: label" }),
-        aboutHeadline: fields.text({
-          label: "Over ons: koptekst",
-          multiline: true,
-        }),
-        aboutBody: fields.array(
-          fields.text({ label: "Alinea", multiline: true }),
-          {
-            label: "Over ons: tekst",
-            itemLabel: (props) => props.value?.slice(0, 40) || "Alinea",
-          },
-        ),
-        aboutValues: fields.array(
-          fields.object({
-            title: fields.text({ label: "Titel" }),
-            description: fields.text({ label: "Omschrijving" }),
-          }),
-          {
-            label: "Waarden",
-            itemLabel: (props) => props.fields.title.value || "Waarde",
-          },
-        ),
         quoteText: fields.text({ label: "Citaat", multiline: true }),
         quoteAttribution: fields.text({ label: "Citaat: toeschrijving" }),
         newsletterLabel: fields.text({ label: "Nieuwsbrief: label" }),
