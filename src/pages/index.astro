@@ -28,7 +28,7 @@ const featuredWorkshops = workshops.slice(0, 4);
           class="inline-flex items-center gap-2 bg-[var(--color-amber-mist)] rounded-[var(--radius-pill)] px-4 py-1.5 mb-6"
         >
           <div class="w-1.5 h-1.5 rounded-full bg-[var(--color-amber)]"></div>
-          <span class="type-overline text-[var(--color-amber-dark)]"
+          <span class="type-overline text-[var(--color-amber-text)]"
             >{hp.heroBadge}</span
           >
         </div>
@@ -65,7 +65,7 @@ const featuredWorkshops = workshops.slice(0, 4);
                 <div
                   class:list={[
                     "stat-number",
-                    i === 1 && "text-[var(--color-blush)]",
+                    i === 1 && "text-[var(--color-blush-dark)]",
                   ]}
                 >
                   {stat.number}
@@ -223,7 +223,7 @@ const featuredWorkshops = workshops.slice(0, 4);
         class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between mb-10"
       >
         <div>
-          <p class="section-overline text-[var(--color-amber-dark)] mb-3">
+          <p class="section-overline text-[var(--color-amber-text)] mb-3">
             Aankomende programma's
           </p>
           <h2 class="font-bold">Workshops &amp; lessen</h2>
@@ -248,7 +248,7 @@ const featuredWorkshops = workshops.slice(0, 4);
         class="font-bold text-white mb-4"
         set:html={hp.newsletterHeadline?.replace(/\n/g, "<br>")}
       />
-      <p class="body-lg mb-8" style="color: var(--color-bordeaux-60)">
+      <p class="body-lg mb-8" style="color: rgba(255,255,255,0.75)">
         {hp.newsletterBody}
       </p>
 

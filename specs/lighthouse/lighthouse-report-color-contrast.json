@@ -1,0 +1,1383 @@
+{
+  "id": "color-contrast",
+  "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+  "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.11/color-contrast).",
+  "score": 0,
+  "scoreDisplayMode": "binary",
+  "details": {
+    "type": "table",
+    "headings": [
+      {
+        "key": "node",
+        "valueType": "node",
+        "subItemsHeading": {
+          "key": "relatedNode",
+          "valueType": "node"
+        },
+        "label": "Failing Elements"
+      }
+    ],
+    "items": [
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-0-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,0,SECTION,0,DIV,1,DIV,1,DIV,1,SPAN",
+          "selector": "div.container-site > div > div.inline-flex > span.type-overline",
+          "boundingRect": {
+            "top": 115,
+            "bottom": 131,
+            "left": 54,
+            "right": 246,
+            "width": 192,
+            "height": 16
+          },
+          "snippet": "<span class=\"type-overline text-[var(--color-amber-dark)]\">",
+          "nodeLabel": "LAAGDREMPELIG · IN JE BUURT",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.68 (foreground color: #c8860a, background color: #fdf0c8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-1-DIV",
+                "path": "1,HTML,1,BODY,1,MAIN,0,SECTION,0,DIV,1,DIV,1,DIV",
+                "selector": "section.bg-white > div.container-site > div > div.inline-flex",
+                "boundingRect": {
+                  "top": 109,
+                  "bottom": 137,
+                  "left": 24,
+                  "right": 262,
+                  "width": 238,
+                  "height": 28
+                },
+                "snippet": "<div class=\"inline-flex items-center gap-2 bg-[var(--color-amber-mist)] rounded-[var(-…\">",
+                "nodeLabel": "LAAGDREMPELIG · IN JE BUURT"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-2-DIV",
+          "path": "1,HTML,1,BODY,1,MAIN,0,SECTION,0,DIV,1,DIV,9,DIV,0,DIV,0,DIV",
+          "selector": "div > div.flex > div > div.stat-number",
+          "boundingRect": {
+            "top": 648,
+            "bottom": 685,
+            "left": 24,
+            "right": 154,
+            "width": 130,
+            "height": 37
+          },
+          "snippet": "<div class=\"stat-number\">",
+          "nodeLabel": "2.400",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.03 (foreground color: #f0a820, background color: #ffffff, font size: 24.0pt (32px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-3-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                "selector": "body > main > section.bg-white",
+                "boundingRect": {
+                  "top": 60,
+                  "bottom": 1306,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 1246
+                },
+                "snippet": "<section class=\"bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-[72px]\">",
+                "nodeLabel": "LAAGDREMPELIG · IN JE BUURT\nLeer je\neigen cyclus\nbegrijpen.\n\nKwalitatieve works…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-4-DIV",
+          "path": "1,HTML,1,BODY,1,MAIN,0,SECTION,0,DIV,1,DIV,9,DIV,1,DIV,0,DIV",
+          "selector": "div > div.flex > div > div.stat-number",
+          "boundingRect": {
+            "top": 648,
+            "bottom": 685,
+            "left": 218,
+            "right": 348,
+            "width": 130,
+            "height": 37
+          },
+          "snippet": "<div class=\"stat-number text-[var(--color-blush)]\">",
+          "nodeLabel": "80%",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.38 (foreground color: #e8908a, background color: #ffffff, font size: 24.0pt (32px), font weight: bold). Expected contrast ratio of 3:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-3-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,0,SECTION",
+                "selector": "body > main > section.bg-white",
+                "boundingRect": {
+                  "top": 60,
+                  "bottom": 1306,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 1246
+                },
+                "snippet": "<section class=\"bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-[72px]\">",
+                "nodeLabel": "LAAGDREMPELIG · IN JE BUURT\nLeer je\neigen cyclus\nbegrijpen.\n\nKwalitatieve works…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-5-P",
+          "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,0,P",
+          "selector": "main > section#over-ons > div.container-site > p.section-overline",
+          "boundingRect": {
+            "top": 1354,
+            "bottom": 1372,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 18
+          },
+          "snippet": "<p class=\"section-overline mb-4\">",
+          "nodeLabel": "ONZE MISSIE",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.42 (foreground color: #7a706a, background color: #f5f5f5, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-6-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,1,SECTION",
+                "selector": "body > main > section#over-ons",
+                "boundingRect": {
+                  "top": 1306,
+                  "bottom": 2387,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 1081
+                },
+                "snippet": "<section id=\"over-ons\" class=\"bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] p…\">",
+                "nodeLabel": "ONZE MISSIE\n\nKennis die jou\nin je kracht zet\n\nEen groot deel van de last die me…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-7-P",
+          "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,1,DIV,1,DIV,1,P",
+          "selector": "div.container-site > div.grid > div > p.body-lg",
+          "boundingRect": {
+            "top": 1476,
+            "bottom": 1634,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 158
+          },
+          "snippet": "<p class=\"body-lg text-[var(--color-bordeaux-40)] mb-4\">",
+          "nodeLabel": "Een groot deel van de last die menstruerende personen ervaren blijft onnodig la…",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.42 (foreground color: #7a706a, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-6-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,1,SECTION",
+                "selector": "body > main > section#over-ons",
+                "boundingRect": {
+                  "top": 1306,
+                  "bottom": 2387,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 1081
+                },
+                "snippet": "<section id=\"over-ons\" class=\"bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] p…\">",
+                "nodeLabel": "ONZE MISSIE\n\nKennis die jou\nin je kracht zet\n\nEen groot deel van de last die me…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-8-P",
+          "path": "1,HTML,1,BODY,1,MAIN,1,SECTION,0,DIV,1,DIV,1,DIV,2,P",
+          "selector": "div.container-site > div.grid > div > p.body-lg",
+          "boundingRect": {
+            "top": 1650,
+            "bottom": 1807,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 158
+          },
+          "snippet": "<p class=\"body-lg text-[var(--color-bordeaux-40)]\">",
+          "nodeLabel": "Met De MenstruatieSchool bieden we toepasbare kennis die taboes doorbreekt. Op …",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.42 (foreground color: #7a706a, background color: #f5f5f5, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-6-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,1,SECTION",
+                "selector": "body > main > section#over-ons",
+                "boundingRect": {
+                  "top": 1306,
+                  "bottom": 2387,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 1081
+                },
+                "snippet": "<section id=\"over-ons\" class=\"bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] p…\">",
+                "nodeLabel": "ONZE MISSIE\n\nKennis die jou\nin je kracht zet\n\nEen groot deel van de last die me…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-9-P",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,1,DIV,0,DIV,0,P",
+          "selector": "div.container-site > div.flex > div > p.section-overline",
+          "boundingRect": {
+            "top": 2757,
+            "bottom": 2775,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 18
+          },
+          "snippet": "<p class=\"section-overline text-[var(--color-amber-dark)] mb-3\">",
+          "nodeLabel": "AANKOMENDE PROGRAMMA'S",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #c8860a, background color: #ffffff, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-10-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION",
+                "selector": "body > main > section#workshops",
+                "boundingRect": {
+                  "top": 2708,
+                  "bottom": 3584,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 876
+                },
+                "snippet": "<section id=\"workshops\" class=\"bg-white border-t border-[var(--color-border-subtle)] py-12 md:py-20\">",
+                "nodeLabel": "AANKOMENDE PROGRAMMA'S\n\nWorkshops & lessen\nAlle workshops →\nBeschikbaar\nWorksho…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-11-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A,0,DIV,0,DIV,1,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.tag",
+          "boundingRect": {
+            "top": 3003,
+            "bottom": 3033,
+            "left": 289,
+            "right": 371,
+            "width": 82,
+            "height": 30
+          },
+          "snippet": "<span class=\"tag tag-outline-blush\">",
+          "nodeLabel": "Workshop",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.38 (foreground color: #e8908a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-12-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 2986,
+                  "bottom": 3249,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nVRIJDAG 22 MEI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-13-P",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A,0,DIV,2,P",
+          "selector": "div.grid > a.workshop-card-link > div.card-body > p.card-date",
+          "boundingRect": {
+            "top": 3078,
+            "bottom": 3120,
+            "left": 41,
+            "right": 371,
+            "width": 330,
+            "height": 42
+          },
+          "snippet": "<p class=\"card-date\">",
+          "nodeLabel": "VRIJDAG 22 MEI 2026 · STUDIO VLIEGENBOS, NIEUWENDAMMERKADE 24F, AMSTERDAM",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-12-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 2986,
+                  "bottom": 3249,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nVRIJDAG 22 MEI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-14-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A,0,DIV,4,DIV,0,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.type-caption",
+          "boundingRect": {
+            "top": 3213,
+            "bottom": 3232,
+            "left": 41,
+            "right": 234,
+            "width": 193,
+            "height": 19
+          },
+          "snippet": "<span class=\"type-caption text-[12px] text-[var(--color-bordeaux-20)]\">",
+          "nodeLabel": "18:30 – 20:30 · Sliding scale €20 – €40",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-12-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 2986,
+                  "bottom": 3249,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nVRIJDAG 22 MEI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-15-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A,0,DIV,4,DIV,1,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.type-caption",
+          "boundingRect": {
+            "top": 3212,
+            "bottom": 3232,
+            "left": 304,
+            "right": 371,
+            "width": 67,
+            "height": 20
+          },
+          "snippet": "<span class=\"type-caption text-[13px] text-[var(--color-blush-dark)]\">",
+          "nodeLabel": "Meer info →",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #c4685e, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-12-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,0,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 2986,
+                  "bottom": 3249,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nVRIJDAG 22 MEI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-16-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A,0,DIV,0,DIV,1,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.tag",
+          "boundingRect": {
+            "top": 3290,
+            "bottom": 3320,
+            "left": 289,
+            "right": 371,
+            "width": 82,
+            "height": 30
+          },
+          "snippet": "<span class=\"tag tag-outline-blush\">",
+          "nodeLabel": "Workshop",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.38 (foreground color: #e8908a, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-17-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 3273,
+                  "bottom": 3536,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus-7-juni/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nZONDAG 07 JUNI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-18-P",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A,0,DIV,2,P",
+          "selector": "div.grid > a.workshop-card-link > div.card-body > p.card-date",
+          "boundingRect": {
+            "top": 3365,
+            "bottom": 3407,
+            "left": 41,
+            "right": 371,
+            "width": 330,
+            "height": 42
+          },
+          "snippet": "<p class=\"card-date\">",
+          "nodeLabel": "ZONDAG 07 JUNI 2026 · STUDIO VLIEGENBOS, NIEUWENDAMMERKADE 24F, AMSTERDAM",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-17-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 3273,
+                  "bottom": 3536,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus-7-juni/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nZONDAG 07 JUNI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-19-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A,0,DIV,4,DIV,0,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.type-caption",
+          "boundingRect": {
+            "top": 3500,
+            "bottom": 3519,
+            "left": 41,
+            "right": 231,
+            "width": 190,
+            "height": 19
+          },
+          "snippet": "<span class=\"type-caption text-[12px] text-[var(--color-bordeaux-20)]\">",
+          "nodeLabel": "13:30 – 15:30 · Sliding scale €20 – €40",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-17-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 3273,
+                  "bottom": 3536,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus-7-juni/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nZONDAG 07 JUNI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-20-SPAN",
+          "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A,0,DIV,4,DIV,1,SPAN",
+          "selector": "a.workshop-card-link > div.card-body > div.card-footer > span.type-caption",
+          "boundingRect": {
+            "top": 3499,
+            "bottom": 3519,
+            "left": 304,
+            "right": 371,
+            "width": 67,
+            "height": 20
+          },
+          "snippet": "<span class=\"type-caption text-[13px] text-[var(--color-blush-dark)]\">",
+          "nodeLabel": "Meer info →",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.82 (foreground color: #c4685e, background color: #ffffff, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-17-A",
+                "path": "1,HTML,1,BODY,1,MAIN,3,SECTION,0,DIV,3,DIV,1,A",
+                "selector": "section#workshops > div.container-site > div.grid > a.workshop-card-link",
+                "boundingRect": {
+                  "top": 3273,
+                  "bottom": 3536,
+                  "left": 24,
+                  "right": 388,
+                  "width": 364,
+                  "height": 263
+                },
+                "snippet": "<a href=\"/workshops/ken-je-cyclus-7-juni/\" class=\"workshop-card-link card border-t-[3px] border-t-[var(--color-blush)]\">",
+                "nodeLabel": "Beschikbaar\nWorkshop\nWorkshop | Ken je Cyclus\n\nZONDAG 07 JUNI 2026 · STUDIO VLI…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-21-P",
+          "path": "1,HTML,1,BODY,1,MAIN,4,SECTION,0,DIV,2,P",
+          "selector": "main > section.bg-[var(--color-bg-inverse)] > div.container-site > p.body-lg",
+          "boundingRect": {
+            "top": 3746,
+            "bottom": 3841,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 95
+          },
+          "snippet": "<p class=\"body-lg mb-8\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "Schrijf je in voor de nieuwsbrief en ontvang updates over nieuwe workshops, ken…",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-22-SECTION",
+                "path": "1,HTML,1,BODY,1,MAIN,4,SECTION",
+                "selector": "body > main > section.bg-[var(--color-bg-inverse)]",
+                "boundingRect": {
+                  "top": 3584,
+                  "bottom": 4051,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 467
+                },
+                "snippet": "<section class=\"bg-[var(--color-bg-inverse)] py-12 md:py-20\">",
+                "nodeLabel": "BLIJF OP DE HOOGTE\n\nNieuwe workshops\nals eerste weten?\n\nSchrijf je in voor de n…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-23-P",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,1,DIV,1,P",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.container-site > div > p.type-caption",
+          "boundingRect": {
+            "top": 4155,
+            "bottom": 4218,
+            "left": 24,
+            "right": 204,
+            "width": 180,
+            "height": 63
+          },
+          "snippet": "<p class=\"type-caption text-[13px] leading-relaxed max-w-[180px]\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "Toegankelijke kennis over de menstruatiecyclus — van jong tot oud.",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-25-P",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,3,DIV,0,P",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.container-site > div > p.type-overline",
+          "boundingRect": {
+            "top": 4266,
+            "bottom": 4284,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 18
+          },
+          "snippet": "<p class=\"type-overline mb-4\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "PROGRAMMA",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-26-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,3,DIV,1,UL,0,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4304,
+            "bottom": 4321,
+            "left": 24,
+            "right": 91,
+            "width": 67,
+            "height": 17
+          },
+          "snippet": "<a href=\"/#workshops\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Workshops",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-27-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,3,DIV,1,UL,1,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4337,
+            "bottom": 4354,
+            "left": 24,
+            "right": 103,
+            "width": 79,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Online lessen",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-28-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,3,DIV,1,UL,2,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4370,
+            "bottom": 4387,
+            "left": 24,
+            "right": 101,
+            "width": 77,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Voor scholen",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-29-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,3,DIV,1,UL,3,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4402,
+            "bottom": 4419,
+            "left": 24,
+            "right": 123,
+            "width": 99,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Voor werkgevers",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-30-P",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,5,DIV,0,P",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.container-site > div > p.type-overline",
+          "boundingRect": {
+            "top": 4471,
+            "bottom": 4489,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 18
+          },
+          "snippet": "<p class=\"type-overline mb-4\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "ORGANISATIE",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-31-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,5,DIV,1,UL,0,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4509,
+            "bottom": 4526,
+            "left": 24,
+            "right": 76,
+            "width": 52,
+            "height": 17
+          },
+          "snippet": "<a href=\"/over-ons\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Over ons",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-32-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,5,DIV,1,UL,1,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4541,
+            "bottom": 4558,
+            "left": 24,
+            "right": 62,
+            "width": 38,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Missie",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-33-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,5,DIV,1,UL,2,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4574,
+            "bottom": 4591,
+            "left": 24,
+            "right": 57,
+            "width": 33,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Team",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-34-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,5,DIV,1,UL,3,LI,0,A",
+          "selector": "div > ul.flex > li > a.type-caption",
+          "boundingRect": {
+            "top": 4607,
+            "bottom": 4624,
+            "left": 24,
+            "right": 72,
+            "width": 48,
+            "height": 17
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[14px] no-underline transition-colors\" style=\"color: var(--color-bordeaux-40)\">",
+          "nodeLabel": "Contact",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.13 (foreground color: #7a706a, background color: #1a010c, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-35-P",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,7,DIV,0,P",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.container-site > div > p.type-overline",
+          "boundingRect": {
+            "top": 4676,
+            "bottom": 4693,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 18
+          },
+          "snippet": "<p class=\"type-overline mb-4\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "NIEUWSBRIEF",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-36-P",
+          "path": "1,HTML,1,BODY,2,FOOTER,0,DIV,7,DIV,1,P",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.container-site > div > p.type-caption",
+          "boundingRect": {
+            "top": 4709,
+            "bottom": 4730,
+            "left": 24,
+            "right": 388,
+            "width": 364,
+            "height": 21
+          },
+          "snippet": "<p class=\"type-caption text-[13px] leading-relaxed mb-4\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "Blijf op de hoogte van nieuwe workshops.",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 9.8pt (13px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-37-SPAN",
+          "path": "1,HTML,1,BODY,2,FOOTER,2,DIV,0,DIV,0,SPAN",
+          "selector": "footer.bg-[var(--color-bordeaux)] > div.border-t > div.container-site > span.type-caption",
+          "boundingRect": {
+            "top": 4926,
+            "bottom": 4945,
+            "left": 24,
+            "right": 178,
+            "width": 154,
+            "height": 19
+          },
+          "snippet": "<span class=\"type-caption text-[12px]\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "© 2025 De MenstruatieSchool",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-38-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,2,DIV,0,DIV,1,DIV,0,A",
+          "selector": "div.border-t > div.container-site > div.flex > a.type-caption",
+          "boundingRect": {
+            "top": 4926,
+            "bottom": 4945,
+            "left": 258,
+            "right": 296,
+            "width": 38,
+            "height": 19
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[12px] no-underline\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "Privacy",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "node": {
+          "type": "node",
+          "lhId": "1-39-A",
+          "path": "1,HTML,1,BODY,2,FOOTER,2,DIV,0,DIV,1,DIV,1,A",
+          "selector": "div.border-t > div.container-site > div.flex > a.type-caption",
+          "boundingRect": {
+            "top": 4926,
+            "bottom": 4945,
+            "left": 320,
+            "right": 388,
+            "width": 68,
+            "height": 19
+          },
+          "snippet": "<a href=\"#\" class=\"type-caption text-[12px] no-underline\" style=\"color: var(--color-bordeaux-60)\">",
+          "nodeLabel": "Voorwaarden",
+          "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #5a4f48, background color: #1a010c, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+        },
+        "subItems": {
+          "type": "subitems",
+          "items": [
+            {
+              "relatedNode": {
+                "type": "node",
+                "lhId": "1-24-FOOTER",
+                "path": "1,HTML,1,BODY,2,FOOTER",
+                "selector": "body > footer.bg-[var(--color-bordeaux)]",
+                "boundingRect": {
+                  "top": 4051,
+                  "bottom": 4961,
+                  "left": 0,
+                  "right": 412,
+                  "width": 412,
+                  "height": 910
+                },
+                "snippet": "<footer class=\"bg-[var(--color-bordeaux)]\">",
+                "nodeLabel": "De MenstruatieSchool\n\nToegankelijke kennis over de menstruatiecyclus — van jong…"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "debugData": {
+      "type": "debugdata",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ]
+    }
+  }
+}

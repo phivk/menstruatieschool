@@ -32,17 +32,19 @@
 
   --color-blush: #e8908a;
   --color-blush-dark: #c4685e;
+  --color-blush-text: #8b3932;
   --color-blush-mist: #f7d8d6;
 
   --color-amber: #f0a820;
   --color-amber-dark: #c8860a;
+  --color-amber-text: #8c6000;
   --color-amber-mist: #fdf0c8;
 
   /* Colors — neutrals */
   --color-bordeaux: #1a010c;
   --color-bordeaux-60: #5a4f48;
-  --color-bordeaux-40: #7a706a;
-  --color-bordeaux-20: #999999;
+  --color-bordeaux-40: #6d6560;
+  --color-bordeaux-20: #726b68;
 
   --color-white: #ffffff;
   --color-off-white: #f5f5f5;
@@ -375,7 +377,7 @@
   }
   .tag-new {
     background: var(--color-amber-mist);
-    color: #8c6000;
+    color: var(--color-amber-text);
   }
   .tag-online {
     background: var(--color-off-white);
@@ -407,11 +409,11 @@
   }
   .tag-outline-blush {
     border: 1.5px solid var(--color-blush);
-    color: var(--color-blush);
+    color: var(--color-blush-text);
   }
   .tag-outline-amber {
     border: 1.5px solid var(--color-amber);
-    color: #8c6000;
+    color: var(--color-amber-text);
   }
   .tag-outline-border {
     border: 1.5px solid var(--color-border);
@@ -588,7 +590,7 @@
     font-weight: 700;
     font-size: clamp(2rem, 7vw, 3.5rem);
     line-height: var(--line-height-tight);
-    color: var(--color-amber);
+    color: var(--color-amber-dark);
   }
 
   /* ── Value card (About/Manifesto section) ───────────────── */
