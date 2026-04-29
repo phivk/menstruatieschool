@@ -3,7 +3,19 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/main.css";
 
-const { title } = Astro.props;
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  ogType?: "website" | "article";
+}
+
+const { title, description, ogImage, ogType = "website" } = Astro.props;
+
+const siteDescription =
+  "De MenstruatieSchool biedt workshops en lessen om je cyclus beter te begrijpen en je hormoonbalans te verbeteren.";
+const siteUrl = "https://menstruatieschool.nl";
+const resolvedDescription = description ?? siteDescription;
 ---
 
 <!doctype html>
@@ -12,6 +24,18 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={resolvedDescription} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={resolvedDescription} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, siteUrl).href} />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:site_name" content="De MenstruatieSchool" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={resolvedDescription} />
+    {ogImage && <meta name="twitter:image" content={ogImage} />}
   </head>
   <body>
     <Header />

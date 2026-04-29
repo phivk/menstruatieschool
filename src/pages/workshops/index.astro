@@ -7,7 +7,10 @@ const workshops = await getCollection("workshops");
 workshops.sort((a, b) => a.data.date.getTime() - b.data.date.getTime());
 ---
 
-<BaseLayout title="Workshops & lessen — De MenstruatieSchool">
+<BaseLayout
+  title="Workshops & lessen — De MenstruatieSchool"
+  description="Bekijk alle aankomende workshops en lessen van De MenstruatieSchool. Leer alles over je menstruatiecyclus, hormonen en hoe je je energie kunt afstemmen op je cyclus."
+>
   <section class="bg-white py-12 md:py-20">
     <div class="container-site">
       <div class="mb-10">

@@ -57,7 +57,12 @@ const statusTagClass = {
 }[data.statusType];
 ---
 
-<BaseLayout title={`${data.title} — De MenstruatieSchool`}>
+<BaseLayout
+  title={`${data.title} — De MenstruatieSchool`}
+  description={data.cardDescription}
+  ogImage={data.image}
+  ogType="article"
+>
   <!-- ── Workshop hero ─────────────────────────────────────── -->
   <section class="bg-white border-b border-[var(--color-border-subtle)] py-16">
     <div class="container-site">
