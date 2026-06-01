@@ -6,7 +6,7 @@ import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 import keystatic from "@keystatic/astro";
 
-import vercel from "@astrojs/vercel";
+import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
   integrations: [
@@ -20,5 +20,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  adapter: vercel(),
+  adapter: cloudflare({
+    platformProxy: { enabled: true, configPath: "wrangler.toml" },
+  }),
 });
