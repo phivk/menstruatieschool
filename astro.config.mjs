@@ -1,4 +1,5 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
+import { fileURLToPath } from "node:url";
 import preact from "@astrojs/preact";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -19,10 +20,18 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      // react-dom/server.browser uses MessageChannel (Node.js) which doesn't
-      // exist in the Cloudflare Workers runtime. server.edge is safe on both.
-      alias: { "react-dom/server": "react-dom/server.edge" },
+      alias: {
+        // react-dom/server.browser uses MessageChannel which doesn't exist in Workers
+        "react-dom/server": "react-dom/server.edge",
+        // sharp is not available in the Workers runtime; passthroughImageService
+        // ensures it is never actually invoked
+        sharp: fileURLToPath(new URL("./src/_sharp-stub.mjs", import.meta.url)),
+      },
     },
+  },
+
+  image: {
+    service: passthroughImageService(),
   },
 
   adapter: cloudflare({
