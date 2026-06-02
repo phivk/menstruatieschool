@@ -18,6 +18,11 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      // react-dom/server.browser uses MessageChannel (Node.js) which doesn't
+      // exist in the Cloudflare Workers runtime. server.edge is safe on both.
+      alias: { "react-dom/server": "react-dom/server.edge" },
+    },
   },
 
   adapter: cloudflare({
