@@ -13,9 +13,19 @@ const photoBlock = (label: string) =>
         label: "Alt-tekst",
         description: "Korte beschrijving van de foto (voor schermlezers)",
       }),
-      text: fields.text({
-        label: "Tekst bij deze foto",
-        multiline: true,
+      overline: fields.text({
+        label: "Tekstvak: klein label",
+        description: "Korte tekst in hoofdletters boven de titel (optioneel)",
+      }),
+      title: fields.text({ label: "Tekstvak: titel" }),
+      text: fields.text({ label: "Tekstvak: tekst", multiline: true }),
+      buttonLabel: fields.text({
+        label: "Tekstvak: knoptekst",
+        description: "Laat leeg voor geen knop",
+      }),
+      buttonUrl: fields.text({
+        label: "Tekstvak: knoplink",
+        description: "Bijv. /workshops/",
       }),
     },
     { label },
