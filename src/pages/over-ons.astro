@@ -1,7 +1,8 @@
 ---
 import { createReader } from "@keystatic/core/reader";
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutPhoto from "../components/AboutPhoto.astro";
+import PhotoBlockText from "../components/PhotoBlockText.astro";
 import keystaticConfig from "../../keystatic.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);
@@ -14,6 +15,20 @@ const borderColors = [
 ];
 
 const photoBlocks = [oo.photoBlock1, oo.photoBlock2];
+
+// Per-block accent colours, following the site's amber / blush palette
+const accents = [
+  {
+    mist: "bg-[var(--color-amber-mist)]",
+    bar: "bg-[var(--color-amber)]",
+    text: "text-[var(--color-amber-text)]",
+  },
+  {
+    mist: "bg-[var(--color-blush-mist)]",
+    bar: "bg-[var(--color-blush)]",
+    text: "text-[var(--color-blush-text)]",
+  },
+];
 ---
 
 <BaseLayout
@@ -75,58 +90,153 @@ const photoBlocks = [oo.photoBlock1, oo.photoBlock2];
     </div>
   </section>
 
-  <!-- ── Photos + text ─────────────────────────────────────── -->
-  <!-- Round photo next to a rectangular text box; the second block mirrors the first -->
+  <!--
+    ── Photos + text ───────────────────────────────────────
+    Design options A–D shown one below the other for comparison;
+    keep the chosen one and remove the rest.
+  -->
+
+  <!-- Optie A: round photo beside a rectangular text box, mirrored -->
   <section
     class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20"
   >
-    <div class="container-site flex flex-col gap-16 md:gap-24">
-      {
-        photoBlocks.map((block, i) => (
-          <div
-            class:list={[
-              "flex flex-col md:items-center gap-8 md:gap-12 lg:gap-16",
-              i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row",
-            ]}
-          >
-            <div class="w-2/3 max-w-[320px] mx-auto md:mx-0 md:w-[30%] md:max-w-none shrink-0">
-              {block.image ? (
-                <Image
-                  src={block.image}
+    <div class="container-site">
+      <p class="type-overline text-[var(--color-bordeaux-20)] mb-6 md:mb-7">
+        Optie A · Ronde foto + tekstvak
+      </p>
+      <div class="flex flex-col gap-8 md:gap-9">
+        {
+          photoBlocks.map((block, i) => (
+            <div
+              class:list={[
+                "flex flex-col md:items-center gap-6 md:gap-7 lg:gap-8",
+                i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row",
+              ]}
+            >
+              <div class="w-2/3 max-w-[320px] mx-auto md:mx-0 md:w-[30%] md:max-w-none shrink-0">
+                <AboutPhoto
+                  image={block.image}
                   alt={block.alt}
-                  width={800}
-                  height={800}
-                  class="w-full aspect-square rounded-full object-cover"
+                  class="aspect-square rounded-full"
                 />
-              ) : (
-                <div class="rounded-full bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-square flex items-center justify-center">
-                  <div class="text-center p-8">
-                    <div class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4" />
-                    <span class="type-overline text-[var(--color-bordeaux-20)]">
-                      Foto · rond
-                    </span>
-                  </div>
-                </div>
-              )}
+              </div>
+              <div class="bg-white border border-[var(--color-border-subtle)] shadow-[var(--shadow-2)] p-6 md:p-8 md:flex-1">
+                <PhotoBlockText block={block} />
+              </div>
             </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
 
-            <div class="bg-white border border-[var(--color-border-subtle)] shadow-[var(--shadow-2)] p-8 md:p-12 lg:p-16 md:flex-1">
-              {block.overline && (
-                <p class="section-overline mb-4">{block.overline}</p>
-              )}
-              <h2 class="font-bold mb-6">{block.title || "Titel"}</h2>
-              <p class="body-lg text-[var(--color-bordeaux-40)] whitespace-pre-line">
-                {block.text || "Tekst bij deze foto."}
-              </p>
-              {block.buttonLabel && block.buttonUrl && (
-                <a href={block.buttonUrl} class="btn btn-secondary btn-lg mt-8">
-                  {block.buttonLabel}
-                </a>
-              )}
+  <!-- Optie B: two cards side by side, photo on top, accent bar -->
+  <section
+    class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
+    <div class="container-site">
+      <p class="type-overline text-[var(--color-bordeaux-20)] mb-6 md:mb-7">
+        Optie B · Kaarten naast elkaar
+      </p>
+      <div class="grid md:grid-cols-2 gap-6">
+        {
+          photoBlocks.map((block, i) => (
+            <div class="bg-white border border-[var(--color-border)] rounded-[var(--radius-xl)] overflow-hidden flex flex-col">
+              <AboutPhoto
+                image={block.image}
+                alt={block.alt}
+                class="aspect-[4/3] border-0"
+              />
+              <div class:list={["h-1.5", accents[i].bar]} />
+              <div class="p-6 md:p-7">
+                <PhotoBlockText block={block} overlineClass={accents[i].text} />
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Optie C: rounded photo on a coloured offset shape, text without a box -->
+  <section
+    class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
+    <div class="container-site">
+      <p class="type-overline text-[var(--color-bordeaux-20)] mb-6 md:mb-7">
+        Optie C · Foto met kleurvlak
+      </p>
+      <div class="flex flex-col gap-8 md:gap-10">
+        {
+          photoBlocks.map((block, i) => (
+            <div
+              class:list={[
+                "flex flex-col md:items-center gap-7 lg:gap-9",
+                i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row",
+              ]}
+            >
+              <div class="relative md:w-[42%] shrink-0 mx-4 md:mx-0">
+                <div
+                  class:list={[
+                    "absolute inset-0 rounded-[var(--radius-xl)]",
+                    accents[i].mist,
+                    i % 2 === 1
+                      ? "-translate-x-4 translate-y-4"
+                      : "translate-x-4 translate-y-4",
+                  ]}
+                />
+                <AboutPhoto
+                  image={block.image}
+                  alt={block.alt}
+                  class="relative aspect-[4/5] rounded-[var(--radius-xl)]"
+                />
+              </div>
+              <div class="md:flex-1 max-w-[560px]">
+                <PhotoBlockText block={block} overlineClass={accents[i].text} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Optie D: photo and pastel text panel joined in one rounded block -->
+  <section
+    class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
+    <div class="container-site">
+      <p class="type-overline text-[var(--color-bordeaux-20)] mb-6 md:mb-7">
+        Optie D · Foto en gekleurd vlak
+      </p>
+      <div class="flex flex-col gap-6">
+        {
+          photoBlocks.map((block, i) => (
+            <div
+              class:list={[
+                "flex flex-col rounded-[var(--radius-xl)] overflow-hidden",
+                i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row",
+              ]}
+            >
+              <div class="relative md:w-1/2 md:min-h-[400px]">
+                <AboutPhoto
+                  image={block.image}
+                  alt={block.alt}
+                  class="aspect-[4/3] md:aspect-auto md:absolute md:inset-0 md:h-full border-0"
+                />
+              </div>
+              <div
+                class:list={[
+                  "md:w-1/2 p-6 md:p-8 flex flex-col items-start justify-center",
+                  accents[i].mist,
+                ]}
+              >
+                <PhotoBlockText block={block} overlineClass={accents[i].text} />
+              </div>
+            </div>
+          ))
+        }
+      </div>
     </div>
   </section>
 </BaseLayout>

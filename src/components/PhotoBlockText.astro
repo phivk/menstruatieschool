@@ -1,0 +1,34 @@
+---
+// Text part of an "Over ons" photo block: overline, title, text and optional button.
+interface Props {
+  block: {
+    overline?: string;
+    title?: string;
+    text?: string;
+    buttonLabel?: string;
+    buttonUrl?: string;
+  };
+  overlineClass?: string;
+}
+
+const { block, overlineClass } = Astro.props;
+---
+
+{
+  block.overline && (
+    <p class:list={["section-overline mb-4", overlineClass]}>
+      {block.overline}
+    </p>
+  )
+}
+<h2 class="font-bold mb-5">{block.title || "Titel"}</h2>
+<p class="body-lg text-[var(--color-bordeaux-40)] whitespace-pre-line">
+  {block.text || "Tekst bij deze foto."}
+</p>
+{
+  block.buttonLabel && block.buttonUrl && (
+    <a href={block.buttonUrl} class="btn btn-secondary btn-lg mt-6">
+      {block.buttonLabel}
+    </a>
+  )
+}
