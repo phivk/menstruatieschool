@@ -20,3 +20,26 @@ values:
   - title: Verbindend
     description: Meer taal, meer begrip, ruimte voor gesprek.
 linkLabel: Meer over ons →
+photoBlock1:
+  image: /images/over-ons/photoBlock1/image.jpg
+  alt: een portretfoto van Leonie Eshuis
+  title: Leonie Eshuis
+  text: >-
+    Leonie is een gecertificeerd hormoon- en cycluscoach, ademcoach en creatief
+    ondernemer. Met een systemische blik werkt ze met passie aan een krachtige
+    positie voor vrouwen in de maatschappij, waarbij cyclisch leven een
+    belangrijke inspiratiebron vormt. Sinds 2025 richt ze zich op de opbouw van
+    De Menstruatieschool, waarin het delen van kennis over de menstruatiecyclus
+    wordt ingezet als pijler voor emancipatie.
+photoBlock2:
+  image: /images/over-ons/photoBlock2/image.jpg
+  alt: 'Een portretfoto van Margriet Sjoerdsma '
+  title: Margriet Sjoerdsma
+  text: >-
+    Margriet is een gecertificeerd hormoon- en cycluscoach, vocalist en
+    songwriter, bekend als Odelion, en werkzaam als vocal coach aan
+    Rockacademie. Na twintig jaar in de muziekwereld vond ze een nieuwe passie
+    in het werken met vrouwen, vanuit haar fascinatie voor de onlosmakelijke
+    verbinding tussen lichaam en stem. Haar overtuiging: wie het lichaam
+    begrijpt, begrijpt ook de stem, en wie de cyclus leert kennen, leert
+    zichzelf op een heel nieuw niveau kennen.
