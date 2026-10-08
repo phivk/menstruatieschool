@@ -1,5 +1,6 @@
 ---
 import { createReader } from "@keystatic/core/reader";
+import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import keystaticConfig from "../../keystatic.config";
 
@@ -11,6 +12,8 @@ const borderColors = [
   "var(--color-blush)",
   "var(--color-vermilion)",
 ];
+
+const photoBlocks = [oo.photoBlock1, oo.photoBlock2];
 ---
 
 <BaseLayout
@@ -18,9 +21,7 @@ const borderColors = [
   description="Ontdek wie wij zijn en waarom we De MenstruatieSchool zijn gestart. We geloven dat kennis over je cyclus je leven kan veranderen."
 >
   <!-- ── Page header ───────────────────────────────────────── -->
-  <section
-    class="bg-white border-b border-[var(--color-border-subtle)] py-16"
-  >
+  <section class="bg-white border-b border-[var(--color-border-subtle)] py-16">
     <div class="container-site">
       <p class="section-overline mb-4">{oo.label}</p>
       <h1
@@ -70,6 +71,45 @@ const borderColors = [
             ))
           }
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Photos + text ─────────────────────────────────────── -->
+  <section
+    class="bg-white border-b border-[var(--color-border-subtle)] py-12 md:py-20"
+  >
+    <div class="container-site">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
+        {
+          photoBlocks.map((block) => (
+            <figure>
+              {block.image ? (
+                <Image
+                  src={block.image}
+                  alt={block.alt}
+                  width={800}
+                  height={1000}
+                  class="rounded-[var(--radius-xl)] w-full aspect-[4/5] object-cover"
+                />
+              ) : (
+                <div class="rounded-[var(--radius-xl)] overflow-hidden bg-[var(--color-amber-mist)] border border-[#F0D888] aspect-[4/5] flex items-center justify-center">
+                  <div class="text-center p-8">
+                    <div class="w-16 h-16 rounded-full bg-[var(--color-amber)] opacity-30 mx-auto mb-4" />
+                    <span class="type-overline text-[var(--color-bordeaux-20)]">
+                      Foto · 4:5
+                    </span>
+                  </div>
+                </div>
+              )}
+              {block.text && (
+                <figcaption class="body-lg text-[var(--color-bordeaux-40)] mt-6 whitespace-pre-line">
+                  {block.text}
+                </figcaption>
+              )}
+            </figure>
+          ))
+        }
       </div>
     </div>
   </section>

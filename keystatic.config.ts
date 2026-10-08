@@ -1,5 +1,26 @@
 import { collection, config, fields, singleton } from "@keystatic/core";
 
+// A photo paired with the text shown next to it on the "Over ons" page
+const photoBlock = (label: string) =>
+  fields.object(
+    {
+      image: fields.image({
+        label: "Foto",
+        directory: "public/images/over-ons",
+        publicPath: "/images/over-ons/",
+      }),
+      alt: fields.text({
+        label: "Alt-tekst",
+        description: "Korte beschrijving van de foto (voor schermlezers)",
+      }),
+      text: fields.text({
+        label: "Tekst bij deze foto",
+        multiline: true,
+      }),
+    },
+    { label },
+  );
+
 export default config({
   storage: import.meta.env.PROD
     ? { kind: "github", repo: "phivk/menstruatieschool" }
@@ -74,13 +95,10 @@ export default config({
       schema: {
         label: fields.text({ label: "Sectie-label" }),
         headline: fields.text({ label: "Koptekst", multiline: true }),
-        body: fields.array(
-          fields.text({ label: "Alinea", multiline: true }),
-          {
-            label: "Tekst",
-            itemLabel: (props) => props.value?.slice(0, 40) || "Alinea",
-          },
-        ),
+        body: fields.array(fields.text({ label: "Alinea", multiline: true }), {
+          label: "Tekst",
+          itemLabel: (props) => props.value?.slice(0, 40) || "Alinea",
+        }),
         values: fields.array(
           fields.object({
             title: fields.text({ label: "Titel" }),
@@ -92,6 +110,8 @@ export default config({
           },
         ),
         linkLabel: fields.text({ label: "Link tekst" }),
+        photoBlock1: photoBlock("Foto + tekst 1"),
+        photoBlock2: photoBlock("Foto + tekst 2"),
       },
     }),
     homepagina: singleton({
