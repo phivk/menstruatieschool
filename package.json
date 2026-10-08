@@ -9,15 +9,15 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
     "@astrojs/markdoc": "^1.0.4",
     "@astrojs/preact": "^5.1.2",
     "@astrojs/react": "^5.0.4",
-    "@astrojs/vercel": "^10.0.5",
     "@keystatic/astro": "^5.0.6",
     "@keystatic/core": "^0.5.50",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "astro": "^6.1.9",
+    "astro": "^6.4.2",
     "preact": "^10.29.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
@@ -26,6 +26,7 @@
     "@tailwindcss/vite": "^4.2.4",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "wrangler": "^4.0.0"
   }
 }

@@ -1,0 +1,7 @@
+name = "menstruatieschool-website"
+main = "./dist/_worker.js"
+compatibility_date = "2025-03-17"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
