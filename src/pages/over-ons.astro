@@ -1,6 +1,8 @@
 ---
 import { createReader } from "@keystatic/core/reader";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutPhoto from "../components/AboutPhoto.astro";
+import PhotoBlockText from "../components/PhotoBlockText.astro";
 import keystaticConfig from "../../keystatic.config";
 
 const reader = createReader(process.cwd(), keystaticConfig);
@@ -11,6 +13,11 @@ const borderColors = [
   "var(--color-blush)",
   "var(--color-vermilion)",
 ];
+
+// Only show blocks with content, so the section stays hidden until it's filled in via Keystatic
+const photoBlocks = [oo.photoBlock1, oo.photoBlock2].filter(
+  (block) => block.image || block.title || block.text,
+);
 ---
 
 <BaseLayout
@@ -18,9 +25,7 @@ const borderColors = [
   description="Ontdek wie wij zijn en waarom we De MenstruatieSchool zijn gestart. We geloven dat kennis over je cyclus je leven kan veranderen."
 >
   <!-- ── Page header ───────────────────────────────────────── -->
-  <section
-    class="bg-white border-b border-[var(--color-border-subtle)] py-16"
-  >
+  <section class="bg-white border-b border-[var(--color-border-subtle)] py-16">
     <div class="container-site">
       <p class="section-overline mb-4">{oo.label}</p>
       <h1
@@ -73,4 +78,36 @@ const borderColors = [
       </div>
     </div>
   </section>
+
+  <!-- ── Photos + text ─────────────────────────────────────── -->
+  <!-- Round photo beside a rectangular text box; the second block mirrors the first -->
+  {
+    photoBlocks.length > 0 && (
+      <section class="bg-[var(--color-off-white)] border-b border-[var(--color-border-subtle)] py-12 md:py-20">
+        <div class="container-site">
+          <div class="flex flex-col gap-8 md:gap-9">
+            {photoBlocks.map((block, i) => (
+              <div
+                class:list={[
+                  "flex flex-col md:items-center gap-6 md:gap-7 lg:gap-8",
+                  i % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row",
+                ]}
+              >
+                <div class="w-2/3 max-w-[320px] mx-auto md:mx-0 md:w-[30%] md:max-w-none shrink-0">
+                  <AboutPhoto
+                    image={block.image}
+                    alt={block.alt}
+                    class="aspect-square rounded-full"
+                  />
+                </div>
+                <div class="bg-white border border-[var(--color-border-subtle)] shadow-[var(--shadow-2)] p-6 md:p-8 md:flex-1">
+                  <PhotoBlockText block={block} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 </BaseLayout>
