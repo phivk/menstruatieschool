@@ -8,23 +8,20 @@ interface Props {
     buttonLabel?: string;
     buttonUrl?: string;
   };
-  overlineClass?: string;
 }
 
-const { block, overlineClass } = Astro.props;
+const { block } = Astro.props;
 ---
 
+{block.overline && <p class="section-overline mb-4">{block.overline}</p>}
+{block.title && <h2 class="font-bold mb-5">{block.title}</h2>}
 {
-  block.overline && (
-    <p class:list={["section-overline mb-4", overlineClass]}>
-      {block.overline}
+  block.text && (
+    <p class="body-lg text-[var(--color-bordeaux-40)] whitespace-pre-line">
+      {block.text}
     </p>
   )
 }
-<h2 class="font-bold mb-5">{block.title || "Titel"}</h2>
-<p class="body-lg text-[var(--color-bordeaux-40)] whitespace-pre-line">
-  {block.text || "Tekst bij deze foto."}
-</p>
 {
   block.buttonLabel && block.buttonUrl && (
     <a href={block.buttonUrl} class="btn btn-secondary btn-lg mt-6">
